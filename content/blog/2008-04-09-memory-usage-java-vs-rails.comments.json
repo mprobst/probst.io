@@ -1,0 +1,23 @@
+[
+ {
+  "author": "Gregor Schmidt",
+  "url": "http://www.nach-vorne.eu",
+  "kind": "COMMENT",
+  "text": "You could try to port your blog to JRuby on Rails. Given the fact, that you are already running a JVM, you might as well use it to power your website.\n\nAFAIK it is possible to start multiple Mongrels in one VM, which might reduce the overall memory usage. Unfortunately I did not yet try this for myself, so I am not sure, if this works out.",
+  "created": "2008-04-09T10:00:14+00:00"
+ },
+ {
+  "author": "Martin Probst",
+  "url": "http://www.martin-probst.com",
+  "kind": "COMMENT",
+  "text": "As far as I know JRuby has to run a complete, separate Rails instance for each request, as the Rails instances themselves are not thread safe. \n\nSo the instances will probably only share the kind of code that is already shared through shared libraries on Linux.\n\nBut you're right, at least I could get rid of the one Mongrel process and of Ferret. I already tried running the blog on JRuby, but Ferret appears to be a problem. And I'm not really looking forward to porting the whole thing to Lucene ....",
+  "created": "2008-04-09T10:07:20+00:00"
+ },
+ {
+  "author": "Charles Oliver Nutter",
+  "url": "headius.blogspot.com",
+  "kind": "COMMENT",
+  "text": "Did not see this post until now, but yes, with JRuby you can run a whole Rails site, multiple instances and all, in a single process. You can use mongrel_jcluster, warbler (WAR-file deployment of Rails apps), or glassfish (in gem form...one-command production deployment). Check out the JRuby wiki...there's walkthroughs there: http://wiki.jruby.org",
+  "created": "2008-04-29T19:27:31+00:00"
+ }
+]

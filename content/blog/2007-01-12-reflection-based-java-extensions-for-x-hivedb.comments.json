@@ -1,0 +1,9 @@
+[
+ {
+  "author": "Bas de Bakker",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "W.r.t. call stacks: in my experience the JVMs from Sun do get you the complete stack trace, but those from IBM somtimes leave out methods that I suspect are inlined during compilation to native code.\n\nI presume they got the idea from java.security.AccessController, but that uses native code for its operations.",
+  "created": "2007-01-13T20:23:19+00:00"
+ }
+]

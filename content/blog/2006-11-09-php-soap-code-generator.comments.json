@@ -1,0 +1,23 @@
+[
+ {
+  "author": "Nigel James",
+  "url": "http://nigeljames.wordpress.com",
+  "kind": "COMMENT",
+  "text": "Hey, \nHave you checked out the SAP Scripting Tool? It is a community effort to make php and SAP integration easier.\n\nMore details here...\nhttps://www.sdn.sap.com/irj/sdn/weblogs?blog=/pub/wlg/4405\n\nregards,\nNigel",
+  "created": "2006-11-15T12:07:47+00:00"
+ },
+ {
+  "author": "Doug",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "Hey, your code does not work.  even after correcting some of the errors it does not work.  did you actually test this?",
+  "created": "2011-08-24T11:45:21.635000+00:00"
+ },
+ {
+  "author": "Martin",
+  "url": "http://www.martin-probst.com/",
+  "kind": "COMMENT",
+  "text": "I did at the time, and it worked. Note that this is a very old post from 2006, maybe APIs have changed. Also, this is just a quick script I hacked together, no guarantees. Maybe it at least gives you a pointer?",
+  "created": "2011-08-24T12:12:12.920000+00:00"
+ }
+]

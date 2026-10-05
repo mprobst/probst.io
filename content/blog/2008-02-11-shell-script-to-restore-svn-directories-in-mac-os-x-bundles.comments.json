@@ -1,0 +1,9 @@
+[
+ {
+  "author": "Alexander Klimetschek",
+  "url": "http://weblogs.goshaky.com/weblogs/alexkli/",
+  "kind": "COMMENT",
+  "text": "Helpful, I often do this manually...\n\nBTW, the Mindquarry client uses a patched SVN that stores the .svn directories not inside the working copy but in a mirror below ~/.svndata/. See here\n\nhttp://weblogs.goshaky.com/weblogs/alexkli/entry/mindquarry_desktop_client_now_with\n\nNote that this is still not 100% stable, because subversion was written with the embedded .svn directory in mind and changing that needs many creative workarounds. Eg. embedded .svn dirs are the reason why you need to do an \"svn del foo\" and cannot do \"rm foo\" normally, because it has to keep all the folders to avoid deleting all the .svn-metadata.",
+  "created": "2008-02-11T17:11:03+00:00"
+ }
+]

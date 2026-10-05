@@ -1,0 +1,23 @@
+[
+ {
+  "author": "Sam Ruby",
+  "url": "http://www.intertwingly.net/blog/",
+  "kind": "COMMENT",
+  "text": "My problem is not with namepaces in general, but with a specific application, best described by an example.  Take a look at http://www.soapware.org/weblogsCom\n\nThe envelope in the first example declares five namespaces.  Only four are ever used, but that is OK.  I'd like to focus on the xsd namespace.  It is not used in association with the name of any element, or with the name of any attribute, it is only used WITHIN A STRING.\n\nA general purpose XML parser can help by keeping track of namespaces and expanding the prefixes for you.  However, it can't know whether or not the colon within the string is significant.  It can only provide a parsed document.  This means that not only does the parser need to keep track of namespaces, but the caller does too.\n\n\n",
+  "created": "2005-02-09T18:59:25+00:00"
+ },
+ {
+  "author": "Martin",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "That is indeed another \"double-escaping\" problem. Though a schema aware parser should read that and interprete it as a <weblogname/> whichs contents are an instance of xsd:string, shouldn't it?",
+  "created": "2005-02-09T19:51:39+00:00"
+ },
+ {
+  "author": "Sam Ruby",
+  "url": "http://www.intertwingly.net/blog/",
+  "kind": "COMMENT",
+  "text": "Essentially a \"shema aware processor\" is the bulk of what a web service toolkit is, and I contributed heavily to one of these: Apache Axis.\n\nThe short answer to your question is: yes, but a more complete answer is that writing such a schema aware parser turns out to be a real PITA.  Axis is written in Java, and can use a JAXP compliant SAX parser (like Apache Xerces) which takes care of a lot of namespace administrivia.  A good portion of this must be duplicated in Apache Axis in order to handle this one attribute.",
+  "created": "2005-02-09T20:22:50+00:00"
+ }
+]

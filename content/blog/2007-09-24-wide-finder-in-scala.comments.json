@@ -1,0 +1,30 @@
+[
+ {
+  "author": "Erik Engbrecht",
+  "url": "http://erikengbrecht.blogspot.com",
+  "kind": "COMMENT",
+  "text": "<p>How long did the Ruby take to execute on your machine?</p>\n",
+  "created": "2007-09-25T16:13:47+00:00"
+ },
+ {
+  "author": "JavaSPEKTRUM Blogosphäre » Blog Archiv » Blogosphäre (aus JavaSPEKTRUM 06/07)",
+  "url": "http://www.sigs.de/blog/js/?p=32",
+  "kind": "PINGBACK",
+  "text": "<p>[...] Datei in den Speicher. Seine verbesserte Lösung beseitigt dieses Problem. Martin Probst liefert die Scala-Variante, Santiago Gala verwendet Python und den bereits in der letzten Kolumne erwähnten [...]</p>\n",
+  "created": "2007-10-16T12:16:16+00:00"
+ },
+ {
+  "author": "Daniel Green",
+  "url": "http://octoberdan.com",
+  "kind": "COMMENT",
+  "text": "Shortly before I stumbled across this post, I wrote a Scala Actor MapReduce solution. Would you be willing to share with me your access logs? You can fax me a NDA if you'd like ;-). Up until now I've been fudging the logs. Would be nice to try my code out on something legit. Perhaps we can compare notes.\n\nOh, and if I understand your code correctly, LogMatcher's code for incrementing isn't threadsafe. I used AtomicInteger and some trickery",
+  "created": "2007-11-24T08:54:50+00:00"
+ },
+ {
+  "author": "Martin Probst",
+  "url": "http://www.martin-probst.com",
+  "kind": "COMMENT",
+  "text": "My code has changed since the above version quite significantly, but I think the Actor code here is correct - the counts hashmap exists for each Actor, and within a single Actor only one Thread executes at any time, so there should not be a problem there.\n\nYou can find the logs I used at Tim Bray's site: <a href=\"http://www.tbray.org/tmp/o10k.ap\">http://www.tbray.org/tmp/o10k.ap</a>",
+  "created": "2007-11-24T09:44:52+00:00"
+ }
+]

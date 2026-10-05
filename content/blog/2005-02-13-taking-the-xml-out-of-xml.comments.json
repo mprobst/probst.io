@@ -1,0 +1,9 @@
+[
+ {
+  "author": "Software Documentation Weblog",
+  "url": "http://weblogs.goshaky.com/weblogs/page/lars/20050213#which_xml_data_model_do",
+  "kind": "TRACKBACK",
+  "text": "<strong>Which XML data model do you think of?</strong>\n\nMartin, I think you have spent too much time implementing an application that uses the official XML Informationset data model. But there is more than DOM and trees, e.g. SAX. In some sense SAX is  XML without XML Infoset  , this might be one reason why it",
+  "created": "2005-02-13T18:09:31+00:00"
+ }
+]

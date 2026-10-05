@@ -1,0 +1,9 @@
+[
+ {
+  "author": "andrew",
+  "url": "http://mp3-players.in/",
+  "kind": "COMMENT",
+  "text": "hi! seems like a common problem on the gentoo forums but even searching through the old posts at the gentoo forum i haven't been able to find a solution to this problem:\n\nCode:\n\neth0 does not exist\n\nnow i'm using the integrated Marvell Yukon Gigabit nic integrated into my asus k8vsedx and there are 2 options when compiling the kernel under networking support -&gt; ethernet (1000mb). one is deprecated and one is experimental. i've tried marking both with a \"*\" and neither of them have worked...\n\ni'm using the instructions for recompiling and installing the kernel found here. i'm manually confguring so section 7.c is what im using .\n\nany advice?\n\nedit: i've also downloaded a bz2 file from syskonnect.com for the nic but i don't know exactly where to extract it. i know i'd have to modularize it in menuconfig and probably add it to the /etc/modules.autoload.d/kernel-2.6.12-gentoo-r4 file right?",
+  "created": "2006-09-12T15:55:06+00:00"
+ }
+]

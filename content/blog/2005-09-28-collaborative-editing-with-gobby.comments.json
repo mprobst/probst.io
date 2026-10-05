@@ -1,0 +1,9 @@
+[
+ {
+  "author": "Philipp Kern",
+  "url": "http://philkern.de",
+  "kind": "COMMENT",
+  "text": "As long as you use closed prioprietary products you'll probably never get a generic protocol. The SubEthaEdit developers declined our request to release protocol specifications, that's why we needed to invent a new one for Gobby. Even if all use BEEP, which all claim to be so open, the extensions are not documented neither.",
+  "created": "2005-10-02T09:08:16+00:00"
+ }
+]

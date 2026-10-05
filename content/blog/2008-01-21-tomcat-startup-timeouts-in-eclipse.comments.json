@@ -1,0 +1,9 @@
+[
+ {
+  "author": "Konrad Höffner",
+  "url": "http://konradhoeffner.de/",
+  "kind": "COMMENT",
+  "text": "Thanks for you advice!\r\nIt does not work in my case unfortunately, however :-(\r\nI closed eclipse, restarted it, re added my Tomcat 6 - Server but it still gave the exception when debugging.",
+  "created": "2011-10-05T20:39:21.070000+00:00"
+ }
+]

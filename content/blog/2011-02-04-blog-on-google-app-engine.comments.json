@@ -1,0 +1,9 @@
+[
+ {
+  "author": "shi",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "For web app development that works out of the box on both GAE and more traditional web hosts, you probably want to check out web2py (www.web2py.com). As a nice extra it probably has the flattest learning curve (without compromising on possibilities) of all python based web frameworks.\r\n",
+  "created": "2011-03-12T21:13:23.664000+00:00"
+ }
+]

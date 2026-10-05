@@ -1,0 +1,2035 @@
+[
+ {
+  "key": [
+   "blog_post",
+   "applied-xml-in-rss-soap-and-rest",
+   "blog_comment",
+   22
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-03-29T20:04:18+00:00"
+   },
+   "text": "<strong>RSS, REST, SOAP and SOA</strong>\n\nMartin Probst  does his best to fulfill is buzzword-quota. He shows his thoughts on  Applied XML in RSS, SOA(P) and REST  . \n \nThere are two responses for his article. I do not think that  REST  ?  will suffer from the same problems as  RSS  ? , as it is ",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "Software Documentation Weblog",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/page/lars/20050329#rss_rest_soap_and_soa"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "applied-xml-in-rss-soap-and-rest",
+   "blog_comment",
+   23
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-03-30T20:43:06+00:00"
+   },
+   "text": "I agree with you on the basic XML problems, mainly encoding, that will be much more prominent if no toolkit is used and everything is done by hand. My personal opinion is that this is due to a complicated encoding mechanism used in XML with tons of variants that I never understood - reading a 100-page Unicode tutorial might help but I didn't come so far yet.... If I'd just be able to insert plain german Umlauts like ä, ö and ü inside an XML document!\n\nWell, I'm drifting away. What I see as the advantage of the REST approach (and the web), is that you keep everything simple - KISS(TM). If you *really* do that, you won't get a large API with lots of methods and the problem of documentation is very small - as you already mention. The key point of REST over toolkits like SOAP is that they should be used when a manual approach is simpler and you are able to customize it to your needs. It might be a bit like it is with XML parsing/access APIs: no one likes DOM or SAX really, there exist alternatives for all programming languages that fit more to the environment and make use of the language's features (examples are REXML for Ruby - http://www.germane-software.com/software/rexml/ - and the great DAX for Java - http://www.asciiarmor.com/blog/default/?permalink=Introducing_DAX.txt).\n\nWell, just some thoughts, REST is actually completely new to me, just read a few articles so far.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Alexander Klimetschek",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "applied-xml-in-rss-soap-and-rest",
+   "blog_comment",
+   24
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-10-21T11:27:29+00:00"
+   },
+   "text": "<strong>Atom Store and the Atomverse</strong>\n\n\tDreaming of an Atom Store: A Database for the Web describes a database of structured information, Atom enabled for content publishing and retrieval, and REST for applications. See Applied XML in RSS, SOA(P) and REST.\n\tIf more timely information source...",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "Migs Paraz - Random Takes",
+   "updated": null,
+   "authorUrl": "http://migs.paraz.com/w/archives/2005/10/21/atom-store-and-the-atomverse/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "atom-xml-schema",
+   "blog_comment",
+   34
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-10-09T03:13:40+00:00"
+   },
+   "text": "Sorry, I'll update my schema. I've been busy.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Randy Charles Morin",
+   "updated": null,
+   "authorUrl": "http://www.kbcafe.com/rss"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "atom-xml-schema",
+   "blog_comment",
+   35
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-10-09T16:37:39+00:00"
+   },
+   "text": "Well, nothing to be sorry for. Thanks a lot in advance!",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "beagle",
+   "blog_comment",
+   25
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-07-18T13:02:42+00:00"
+   },
+   "text": "Thanks for the tip, however does this apply to Beagle 0.0.11 for Hoary?\nThanks\nBen",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Ben",
+   "updated": null,
+   "authorUrl": "http://www.benvassie.net/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "beagle",
+   "blog_comment",
+   26
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-07-18T13:15:18+00:00"
+   },
+   "text": "Yes, beagle in the version  0.0.11.1 for Hoary.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "blog-on-google-app-engine",
+   "blog_comment",
+   13003
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2011-03-12T21:13:23.664000+00:00"
+   },
+   "text": "For web app development that works out of the box on both GAE and more traditional web hosts, you probably want to check out web2py (www.web2py.com). As a nice extra it probably has the flattest learning curve (without compromising on possibilities) of all python based web frameworks.\r\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "shi",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "blogimpl-implements-blog",
+   "blog_comment",
+   362
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-05-20T20:44:33+00:00"
+   },
+   "text": "There is one simple reason for telling people to write an interface for EVERY class. This keeps poor developers from implementing and using a lot of static methods and other crappy stuff.\n\nI'm pleading guilty of using FooImpl from time to time. FooImpl says: \"I am the first and very simple implementation. There is maybe a 50/50 chance that you will implement another class for my interface.\"\n\nUsually when I use FooImpl, I write the simple implementation first and generate interface Foo from that. I may write a next class implementing Foo, but in this case I usually rename FooImpl to something better suited.\n\nI see the awkwardness in this, but I feel like this is typical Java.\n\nAnd what JP mentions, the I-prefix for interfaces. This is something that makes sense to me, but I rarely do it. Maybe I should try to get used to this.\n\nHave a nice day,\n\nRiche",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Richard Metzler",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "blogimpl-implements-blog",
+   "blog_comment",
+   363
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-05-21T05:08:55+00:00"
+   },
+   "text": "Richie: I don't really like forcing developers into certain style guides. Sometimes it appears to be necessary - but if you have really bad developers, you're code base is going to be a mess anyways.\n\nAnd you're right, it is typical Java. But I think I could have a lot more fun writing Java if people wouldn't do this stupid anti-pattern stuff all the time.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin Probst",
+   "updated": null,
+   "authorUrl": "http://www.martin-probst.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "blogimpl-implements-blog",
+   "blog_comment",
+   364
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-05-21T11:38:46+00:00"
+   },
+   "text": "I certainly would have a lot more fun if I would be allowed to write Ruby. But I guess, than some of my fellow developers would mess up much more than they do anyways.\n\nAnd I came up with another reason: J2EE / JEE, JMX and so on teach you more or less to write an interface and exactly one implementation. Some of these frameworks force you to use a certain namescheme for interface and implementation, sometimes it's a convention. None of them use FooImpl but this style is encouraged through these frameworks and some books.\n\nI'm not saying using FooImpl all the time is a good thing, but there are much bigger problems out there.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Richard Metzler",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "collaborative-editing-with-gobby",
+   "blog_comment",
+   33
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-10-02T09:08:16+00:00"
+   },
+   "text": "As long as you use closed prioprietary products you'll probably never get a generic protocol. The SubEthaEdit developers declined our request to release protocol specifications, that's why we needed to invent a new one for Gobby. Even if all use BEEP, which all claim to be so open, the extensions are not documented neither.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Philipp Kern",
+   "updated": null,
+   "authorUrl": "http://philkern.de"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "compiled-xquery",
+   "blog_comment",
+   41
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-12-21T20:52:29+00:00"
+   },
+   "text": "<strong>More Compiled XQuery</strong>\n\nMartin Probst  responded to my yesterday's post:  Compiled XQuery  \n \n   Lars, just because XQuery can be statically typed you can?t remove all the runtime checks and by that be much faster, there are still a lot of (possibly non-type related) runtime...",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "Software Documentation Weblog",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/page/lars?entry=more_compiled_xquery"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "databases-and-caching",
+   "blog_comment",
+   395
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-11-11T18:57:21+00:00"
+   },
+   "text": "And not to forget JCR (Java Content Repository), which also better fits the needs of content-centric web applications.\n\nSorry, could not resist ;-)",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Alexander Klimetschek",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/alexkli/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "dita-darwin-information-typing-architecture",
+   "blog_comment",
+   20
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-03-21T20:21:46+00:00"
+   },
+   "text": "The IBM team that started DITA development did it five years ago, and at that time DTD was it for available standards.\n\nSince they were determined to do it in a standard-compliant way, they used DTDs.\n\n(Asked one of the developers that same question at a talk.)",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Graydon",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "dita-darwin-information-typing-architecture",
+   "blog_comment",
+   21
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-08-19T14:44:40+00:00"
+   },
+   "text": "Dear Technical Communication Professional,\n\nYou are cordially invited to attend the 14th Conference of the Transalpine Chapter of the Society of Technical Communications (STC) from 28 September to 30 September 2005 at the Canadian Embassy in Berlin, Germany. This three day event, which is hosted by local members of the chapter in cooperation with the Embassy of Canada, will bring technical communicators from Europe and North America together to learn about the latest developments in our field and to assess the changing nature of our profession.\n\nOur workshop leader is Michael Priestley, Information Developer for the IBM Toronto Software Development Laboratory, who will will conduct a one-day workshop about the Darwin Information Typing Architecture (DITA) on Wednesday. This workshop will give you an introduction to this open format and show you how to author technical information with the XML-based architecture. \n\nSessions on Thursday and Friday are jam packed with great speakers on a wide range of interesting topics for technical writers, and anyone interested in improving their writing skills. \n\nFor more details, see the attached pdf file and our new Conference website at http://www.stc-transalpine.org/conference. \n\nHope to see you there.\n\nBest regards,\n\nGlenn Lea",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Glenn Lea",
+   "updated": null,
+   "authorUrl": "http://www.stc-transalpine.org/conference"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "division-of-labour",
+   "blog_comment",
+   401
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2010-05-04T22:59:43+00:00"
+   },
+   "text": "Given the timing of this post and its title (Division of Labour), just about a week before the General Election in Britain, I thought this might be a political post.  Ah well.  It was still worth reading. ;-)",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Chris(topher) Lupone",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "docbook-to-word-with-free-bibliography-converter",
+   "blog_comment",
+   59
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-04-24T20:05:37+00:00"
+   },
+   "text": "<p>Why not edit the LaTeX source \"by hand\"? It's not really that bad, the syntax is simple and you can really learn what you need in fifteen minutes or so. On the upside you have a document format which is a lot more stable than any of the others, it's all plaintext so it's trivial to move cross platforms and backup, and it can definitely do what you need.</p>\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Jonas B.",
+   "updated": null,
+   "authorUrl": "http://x"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "eclipse-pde-builds",
+   "blog_comment",
+   52
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-06-26T13:20:19+00:00"
+   },
+   "text": "&gt; there is a bug where having a plugin installed in some version \n&gt; conflicts with building it\n\nAre your target platform (see PDE preferences) and your working copy of Eclipse (one which is used for coding)  the same? If yes, then try to split them. Develop your code using one copy of Eclipse installation, build code against another one. It should solve many problems.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "n/a",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "embedding-xslt-transformations-in-jars-or-how-i-learned-to-not-love-the-resolver",
+   "blog_comment",
+   56
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-01-22T13:27:42+00:00"
+   },
+   "text": "I came up with using a DTD in this particular XSLT file. It makes editing the file in a DTD-aware XML editor much easier.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Bas de Bakker",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "embedding-xslt-transformations-in-jars-or-how-i-learned-to-not-love-the-resolver",
+   "blog_comment",
+   57
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-04-17T22:23:23+00:00"
+   },
+   "text": "<p>[...] Java files tend to get enormous in size, even for really mundane tasks. This is partially due to bad APIs (I blogged about my experience of putting an XSLT transformation in a self-contained JAR). The other part is just the language itself. I&#8217;d really hope that good type inference could solve a lot of the ugly to read code. It will require quite a change in how to write APIs, i.e. be more explicit on the return type of things in the method name. [...]</p>\n",
+   "kind": "PINGBACK",
+   "approved": false,
+   "author": "Martins Notepad &raquo; Blog Archive &raquo; Type inference for Java",
+   "updated": null,
+   "authorUrl": "http://www.martin-probst.com/2007/04/17/type-inference-for-java/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "emc-martin-probst",
+   "blog_comment",
+   393
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-11-04T21:08:23+00:00"
+   },
+   "text": "Congrats! I wish you all the best - especially a lot of fun. Nice to hear you stay in Potsdam/Berlin.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Silvan",
+   "updated": null,
+   "authorUrl": "http://rapidrabb.it"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "europeans-austrians-germans-whatever",
+   "blog_comment",
+   44
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-02-06T18:23:45+00:00"
+   },
+   "text": "<strong>Molotov Cocktails Hurled at Austrian Embassy in Tehran</strong>\n\nA crowd of about 200 people armed with stones and molotov cocktails focused their rage on the Austrian Embassy in Tehran on Monday. The bombs exploded in flames against metal grilles guarding the windows, but the building did not catch fire and the fla...",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "Vital Perspective",
+   "updated": null,
+   "authorUrl": "http://vitalperspective.typepad.com/vital_perspective_clarity/2006/02/molotov_cocktai.html"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "exporting-from-iphoto-to-picasa-web",
+   "blog_comment",
+   44003
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2012-01-15T01:39:23.966000+00:00"
+   },
+   "text": "We had a power outage in our house when we were on vacation and couldn't ssh to our server, which is scary since you don't know what's going on.  Since then, we signed up for CrashPlan to backup all our data to the cloud.  It backs up Macs, Linux and Windows systems.  Still use TimeMachine and rsync for backups at our home between systems, but CrashPlan is for when everything goes.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Blair Zajac",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "gentoo-to-ubuntu",
+   "blog_comment",
+   39
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-09-12T15:55:06+00:00"
+   },
+   "text": "hi! seems like a common problem on the gentoo forums but even searching through the old posts at the gentoo forum i haven't been able to find a solution to this problem:\n\nCode:\n\neth0 does not exist\n\nnow i'm using the integrated Marvell Yukon Gigabit nic integrated into my asus k8vsedx and there are 2 options when compiling the kernel under networking support -&gt; ethernet (1000mb). one is deprecated and one is experimental. i've tried marking both with a \"*\" and neither of them have worked...\n\ni'm using the instructions for recompiling and installing the kernel found here. i'm manually confguring so section 7.c is what im using .\n\nany advice?\n\nedit: i've also downloaded a bz2 file from syskonnect.com for the nic but i don't know exactly where to extract it. i know i'd have to modularize it in menuconfig and probably add it to the /etc/modules.autoload.d/kernel-2.6.12-gentoo-r4 file right?",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "andrew",
+   "updated": null,
+   "authorUrl": "http://mp3-players.in/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "google-groups-being-spammed",
+   "blog_comment",
+   360
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-05-20T06:54:42+00:00"
+   },
+   "text": "Perhaps using a mechanical turk or some similar approach. CAPCHAs do not fend off spammers, they fend off users.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Lars Trieloff",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/lars/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "google-martin",
+   "blog_comment",
+   5004
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2011-02-01T15:20:26.217000+00:00"
+   },
+   "text": "Good luck! And good to have someone with Google inside knowledge :-)",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Alexander Klimetschek",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "google-martin",
+   "blog_comment",
+   5005
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2011-02-01T16:37:35.825000+00:00"
+   },
+   "text": "thanks for all your great work, energy and -yes- German humour.\r\n\r\np.s. can we use this farewell note in our next job posting?",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Irsan Widarto",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "google-martin",
+   "blog_comment",
+   6002
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2011-02-01T16:37:40.949000+00:00"
+   },
+   "text": "Wish you all the best! And have a good time in Munich. I happen to be around there quite often.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Silvan T. Golega",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "google-martin",
+   "blog_comment",
+   7002
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2011-02-02T10:25:07+00:00"
+   },
+   "text": "Hals- und Beinbruch!",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin Zwei",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "google-martin",
+   "blog_comment",
+   7003
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2011-02-04T01:09:47.472000+00:00"
+   },
+   "text": "Martin,\r\n\r\nI believe that it is right decision. I know your feelings but unfortunately there is no future in IIG. I also have have missed the dutch lunch :)\r\n\r\nGood Luck,\r\n\r\nVictor",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Victor Spivak",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "hello-world",
+   "blog_comment",
+   1
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2004-04-14T11:53:39+00:00"
+   },
+   "text": "Not bad... And now you not only have a weblog, but a first comment as well;-)",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Marc Aßmann",
+   "updated": null,
+   "authorUrl": "http://www.marc-assmann.de"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "hello-world",
+   "blog_comment",
+   2
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2004-04-20T19:47:16+00:00"
+   },
+   "text": "Hey, why didn't you tell me?\n\n\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Lars Trieloff",
+   "updated": null,
+   "authorUrl": "http://trieloff.dyndns.org/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "house-across-the-street",
+   "blog_comment",
+   58
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-02-14T16:43:03+00:00"
+   },
+   "text": "<p>Du stinkst ^^\nWohnen da immernoch so komische Leute mit wenig Haaren und agressiven Liedgut bei dir in der Gegend?</p>\n\n<p>Gruss vom Soligott :P</p>\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "raph",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "how-to-look-for-applicants",
+   "blog_comment",
+   369
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-09-20T12:23:14+00:00"
+   },
+   "text": "Writing a good job description is like writing a good Google search, because HR folks and recruiters will treat it more-or-less like a list of keywords.\n\nIf you don't include enough, you end up having to sort through a huge amount of chaff, and I have the growing suspicion that recruiters won't send you their best resumes if the lesser ones sufficiently match.\n\nI think job fairs are probably your best bet.  You need to bypass HR and talk to hiring managers, and typically there will be some hiring managers at a job fair.\n\nWhat are you interested in and where (geographically) would you like to work?",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Erik Engbrecht",
+   "updated": null,
+   "authorUrl": "http://erikengbrecht.blogspot.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "how-to-look-for-applicants",
+   "blog_comment",
+   370
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-09-20T12:44:14+00:00"
+   },
+   "text": "This is the difference in hiring people vs. hiring talent vs. hiring headcount. Some people seem to be fine with joining a company that hires headcount.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Lars Trieloff",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/lars"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "how-to-look-for-applicants",
+   "blog_comment",
+   371
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-09-20T12:56:13+00:00"
+   },
+   "text": "@erik: I'm currently looking for jobs in and around Berlin. I actually have offers for remote jobs that would involve some commuting and telework, but I'd also like to at least see alternatives. For an interesting job, I'd certainly be willing to relocate.\n\nAs you might tell from my blog, I'm interested in programming languages, software architectures, and XML stuff. I find it difficult to find jobs that actually involve developing interesting technology, and not just implementing the next random website...\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin Probst",
+   "updated": null,
+   "authorUrl": "http://www.martin-probst.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "inputmanagers-in-leopard",
+   "blog_comment",
+   63
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-11-20T23:42:15+00:00"
+   },
+   "text": "The @ sign indicates that additional metadata is available for that file. You can see the list of attributes with \"xattr filename\" and print the value of an attribute with \"xattr -p attrname filename\". Since Tiger Apple's HFS+ is fully metadata capable, see here http://arstechnica.com/reviews/os/macosx-10-4.ars/7",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Alexander Klimetschek",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/alexkli/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "j2ee-not-ready-for-the-enterprise",
+   "blog_comment",
+   93
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-12-17T12:28:43+00:00"
+   },
+   "text": "I remember getting a working UTF-8 encoding with Cocoon and Dojo - argh!\n\nhttp://cocoon.apache.org/2.2/1366_1_1.html",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Alexander Klimetschek",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "java-unit-test-coverage",
+   "blog_comment",
+   32
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-11-25T20:21:54+00:00"
+   },
+   "text": "I would like to share my interest in a great tool like Emma, which I recently discovered, and to contradict you that from my point of view, it is not a drawback that Emma does not have sharper colors, as the report it provides I find to be more complex and helpful.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Norbert Toth-Gati",
+   "updated": null,
+   "authorUrl": "http://norbert-tothgati.blogspot.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "joel-on-the-hpi",
+   "blog_comment",
+   5
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-01-09T13:43:39+00:00"
+   },
+   "text": "<strong>Das Gute am HPI...</strong>\nJoel on Software writes this:\n    The moral of the story is that computer science is not the same as software development. If you're really really lucky, your school might have a decent software development curriculum, although, they might not, becaus...",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "LZone",
+   "updated": null,
+   "authorUrl": "http://llando.homeunix.org/index.php?p=279"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "jsps-suck-episode-217",
+   "blog_comment",
+   221
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-04-22T15:28:52+00:00"
+   },
+   "text": "ehrlich, solange du die Wahl hast: nimm keine JSPs und mach nichts mit JSF. (Auch wenn in meiner Firma das mit zum Entwicklungsstack gehoert.) Wenn nicht jede Seite wirklich gleich aussehen muss und man kein Portal oder so baut, nimm lieber einen Templating-Ansatz bei dem nichts kompiliert werden muss. Die Entwicklungszeit ist einfach viel kürzer, wenn man nicht ständig den Server neu starten muss um ein paar Kleinigkeiten zu ändern.\nViele Grüße,\nRichard\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Richard Metzler",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "jsps-suck-episode-217",
+   "blog_comment",
+   222
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-04-23T01:14:22+00:00"
+   },
+   "text": "@Martin:\n\nYou could use JSP comments:\n\n<%-- ... --%>\n\n@Richard:\n\nNormalerweise sollte das Framework JSPs automatisch neu kompilieren, sobald sie sich geändert haben. So ist es seit je her vorgesehen...",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Alexander Klimetschek",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/alexkli/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "macbook-pro",
+   "blog_comment",
+   42
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-02-07T15:01:50+00:00"
+   },
+   "text": "Maybe you want to give it a try in Switzerland, starting around CHF 3000 - that's a bit more than 2000€... :-)",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Stefan",
+   "updated": null,
+   "authorUrl": "http://www.stefanrufer.ch"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "maven-2",
+   "blog_comment",
+   36
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-11-17T13:11:57+00:00"
+   },
+   "text": "Got same problem here .. cant find how to reset that blacklist thingy.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Rickard Lundin",
+   "updated": null,
+   "authorUrl": "http://lab.ludde.se"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "maven-2",
+   "blog_comment",
+   37
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-08-15T22:51:20+00:00"
+   },
+   "text": "<p>same. . . .annoying. . . .</p>\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "dave",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "maven-2",
+   "blog_comment",
+   38
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-08-15T22:52:26+00:00"
+   },
+   "text": "<p>just surfing for a solution . . .why would they even implement this??? I dont see it being very useful, but it is a big annoyance</p>\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "dave",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "memory-usage-java-vs-rails",
+   "blog_comment",
+   180
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-04-09T10:00:14+00:00"
+   },
+   "text": "You could try to port your blog to JRuby on Rails. Given the fact, that you are already running a JVM, you might as well use it to power your website.\n\nAFAIK it is possible to start multiple Mongrels in one VM, which might reduce the overall memory usage. Unfortunately I did not yet try this for myself, so I am not sure, if this works out.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Gregor Schmidt",
+   "updated": null,
+   "authorUrl": "http://www.nach-vorne.eu"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "memory-usage-java-vs-rails",
+   "blog_comment",
+   181
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-04-09T10:07:20+00:00"
+   },
+   "text": "As far as I know JRuby has to run a complete, separate Rails instance for each request, as the Rails instances themselves are not thread safe. \n\nSo the instances will probably only share the kind of code that is already shared through shared libraries on Linux.\n\nBut you're right, at least I could get rid of the one Mongrel process and of Ferret. I already tried running the blog on JRuby, but Ferret appears to be a problem. And I'm not really looking forward to porting the whole thing to Lucene ....",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin Probst",
+   "updated": null,
+   "authorUrl": "http://www.martin-probst.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "memory-usage-java-vs-rails",
+   "blog_comment",
+   224
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-04-29T19:27:31+00:00"
+   },
+   "text": "Did not see this post until now, but yes, with JRuby you can run a whole Rails site, multiple instances and all, in a single process. You can use mongrel_jcluster, warbler (WAR-file deployment of Rails apps), or glassfish (in gem form...one-command production deployment). Check out the JRuby wiki...there's walkthroughs there: http://wiki.jruby.org",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Charles Oliver Nutter",
+   "updated": null,
+   "authorUrl": "headius.blogspot.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "mobile-phone-contracts",
+   "blog_comment",
+   399
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2009-02-18T12:07:59+00:00"
+   },
+   "text": "Simyo is not as nice as you would think, in December I had a big issue with my invoice not fitting to my call list and they charged me double the amount I actually owed them. Getting answer from them took almost a month and I got a voucher, but the problem is they never explained to me how it got wrong and how they solved it.\n\n\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin",
+   "updated": null,
+   "authorUrl": "http://blog.grundprinzip.de"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "moving-to-rotterdam",
+   "blog_comment",
+   18
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-08-19T14:46:34+00:00"
+   },
+   "text": "Dear Technical Communication Professional,\n\nYou are cordially invited to attend the 14th Conference of the Transalpine Chapter of the Society of Technical Communications (STC) from 28 September to 30 September 2005 at the Canadian Embassy in Berlin, Germany. This three day event, which is hosted by local members of the chapter in cooperation with the Embassy of Canada, will bring technical communicators from Europe and North America together to learn about the latest developments in our field and to assess the changing nature of our profession.\n\nOur workshop leader is Michael Priestley, Information Developer for the IBM Toronto Software Development Laboratory, who will will conduct a one-day workshop about the Darwin Information Typing Architecture (DITA) on Wednesday. This workshop will give you an introduction to this open format and show you how to author technical information with the XML-based architecture. \n\nSessions on Thursday and Friday are jam packed with great speakers on a wide range of interesting topics for technical writers, and anyone interested in improving their writing skills. \n\nFor more details, see the attached pdf file and our new Conference website at http://www.stc-transalpine.org/conference. \n\nHope to see you there.\n\nBest regards,\n\nGlenn Lea",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Glenn Lea",
+   "updated": null,
+   "authorUrl": "http://www.stc-transalpine.org/conference"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "moving-to-rotterdam",
+   "blog_comment",
+   19
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-10-11T17:57:43+00:00"
+   },
+   "text": "Hi Martin,\n\nI really like this website, and you are right Rotterdam is cool.\n\nRegards\nMichiel",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Michiel Veen",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "namespaces",
+   "blog_comment",
+   17
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-03-14T18:31:17+00:00"
+   },
+   "text": "Just to add some confusion. Case 1 is not allowed according to Namespace Spec 1.0. It is allowed according to Namespace Spec 1.1.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Lars Trieloff",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/page/lars"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "new-blog-engine",
+   "blog_comment",
+   75
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-11-29T16:14:00+00:00"
+   },
+   "text": "<h3>Content sanitation, html5lib and Iñtërnâtiônàlizætiøn</h3><p><a href='http://www.martin-probst.com/blog/2007/11/20/new-blog-engine'>As I wrote</a>, I migrated to a handwritten blog engine mainly because I was unsatisfied with the way Wordpress handled my content*. So one of the goals was to properly handle any input HTML and Unicode characters.</p>\n\n\n<h2>Un",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "Martin Probst's Weblog",
+   "updated": null,
+   "authorUrl": "http://www.martin-probst.com/blog/2007/11/29/content-sanitation-html5lib-and-i-t-rn-ti-n-liz-ti-n"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "packages-classes-methods-scopes",
+   "blog_comment",
+   60
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-04-02T10:23:45+00:00"
+   },
+   "text": "<p>I agree it is all just scope. However, each scope has its hard coded semantics and VM behavior, which make them quite different.</p>\n\n<p>The OSGi takes the package scope very serious and adds a fourth scope: the bundle or JAR file that provides visibility rules and additional meta data for the other scopes.</p>\n\n<p>Kind regards,</p>\n\n<p>Peter Kriens</p>\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "n/a",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "php-soap-code-generator",
+   "blog_comment",
+   53
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-11-15T12:07:47+00:00"
+   },
+   "text": "Hey, \nHave you checked out the SAP Scripting Tool? It is a community effort to make php and SAP integration easier.\n\nMore details here...\nhttps://www.sdn.sap.com/irj/sdn/weblogs?blog=/pub/wlg/4405\n\nregards,\nNigel",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Nigel James",
+   "updated": null,
+   "authorUrl": "http://nigeljames.wordpress.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "php-soap-code-generator",
+   "blog_comment",
+   30003
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2011-08-24T11:45:21.635000+00:00"
+   },
+   "text": "Hey, your code does not work.  even after correcting some of the errors it does not work.  did you actually test this?",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Doug",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "php-soap-code-generator",
+   "blog_comment",
+   31003
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2011-08-24T12:12:12.920000+00:00"
+   },
+   "text": "I did at the time, and it worked. Note that this is a very old post from 2006, maybe APIs have changed. Also, this is just a quick script I hacked together, no guarantees. Maybe it at least gives you a pointer?",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin",
+   "updated": null,
+   "authorUrl": "http://www.martin-probst.com/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "reducing-xpath",
+   "blog_comment",
+   400
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2010-01-05T18:11:36+00:00"
+   },
+   "text": "Good observation. If you take a look at DSSSL, you see we've been there already …",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Stefan Tilkov",
+   "updated": null,
+   "authorUrl": "http://www.innoq.com/blog/st/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "reflection-based-java-extensions-for-x-hivedb",
+   "blog_comment",
+   55
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-01-13T20:23:19+00:00"
+   },
+   "text": "W.r.t. call stacks: in my experience the JVMs from Sun do get you the complete stack trace, but those from IBM somtimes leave out methods that I suspect are inlined during compilation to native code.\n\nI presume they got the idea from java.security.AccessController, but that uses native code for its operations.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Bas de Bakker",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "shell-meta-programming",
+   "blog_comment",
+   397
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-12-08T13:52:17+00:00"
+   },
+   "text": "You could also write a java launcher app instead of shell-scripts. Simply fork the JVM with the new memory settings. Something like\n\nfinal String javaExecutable = isWindows ? \"java.exe\" : \"java\";\nfinal String jvm = System.getProperty( \"java.home\" ) + File.separator + \"bin\" + File.separator + javaExecutable;\n\nRuntime.getRuntime().exec(new String[] {\n   jvm, \"-Xmx256m\", \"-jar\", jarFilename\n});\n\ndoes the trick. If you can put everything in one jar file, and have the startup code detect if it is the normal or forked variant, you end up with a double-clickable jar that automatically uses the right amount of heap size (instead of the default 64mb) or the ones configured in your rc file.\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Alexander Klimetschek",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/alexkli/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "shell-meta-programming",
+   "blog_comment",
+   398
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-12-08T15:54:47+00:00"
+   },
+   "text": "Yes, but this is actually for a command line.\n\nThink typing \"xhive ls\", then waiting for one JVM being spawned, and then waiting for another JVM being spawned. It's already taking longer than I'd ideally want...",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin",
+   "updated": null,
+   "authorUrl": "http://www.martin-probst.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "shell-script-to-restore-svn-directories-in-mac-os-x-bundles",
+   "blog_comment",
+   178
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-02-11T17:11:03+00:00"
+   },
+   "text": "Helpful, I often do this manually...\n\nBTW, the Mindquarry client uses a patched SVN that stores the .svn directories not inside the working copy but in a mirror below ~/.svndata/. See here\n\nhttp://weblogs.goshaky.com/weblogs/alexkli/entry/mindquarry_desktop_client_now_with\n\nNote that this is still not 100% stable, because subversion was written with the embedded .svn directory in mind and changing that needs many creative workarounds. Eg. embedded .svn dirs are the reason why you need to do an \"svn del foo\" and cannot do \"rm foo\" normally, because it has to keep all the folders to avoid deleting all the .svn-metadata.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Alexander Klimetschek",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/alexkli/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "soap-with-axis-4d-and-something-called-multirefs",
+   "blog_comment",
+   136
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-01-30T19:01:18+00:00"
+   },
+   "text": "Hi Martin!\n\nMore SOAP-Bashing by the leading developer of the Google-Search API (which is/was SOAP-based by the way):\nhttp://www.somebits.com/weblog/tech/bad/whySoapSucks.html\n\n.. and his comments on reducing headaches:\nhttp://www.somebits.com/weblog/tech/webservices/\n\nCheers,\nFrank.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Frank",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "spring-mvc-web-framework-not-so-l33t",
+   "blog_comment",
+   112
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-12-21T11:27:33+00:00"
+   },
+   "text": "You are absolutely right here. That loosely coupling and XML configuration in Spring is not good - although I basically like many of Spring's other features.\n\nBut I actually see a positive future for Java in the webapplication space with OSGi and Sling:\n\nhttp://www.osgi.org/\nhttp://incubator.apache.org/sling/\n\nOSGI gives you bundles (simple annotated jar files) that can be installed and updated on a running JVM - think of it as a very good plugin system (it actually works ;-). For inter-bundle communication you can provide services which makes the promise of component programming really come true while having a fully versionized software lifecycle management. The popular implementation in Eclipse is not making fully use of the OSGi features at the moment.\n\nSling on the other hand is a very cool webapplication framework that is still getting better. You can choose if you want to write your code in scripts (Javascript, Ruby, etc, anything available for the Java Scripting API) or with all the static-compiled Java features via OSGi bundles. Watch out for the upcoming releases of Spring.\n\nDisclaimer: I am working at the company that started the Sling project ;-) ",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Alexander Klimetschek",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/alexkli/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "spring-mvc-web-framework-not-so-l33t",
+   "blog_comment",
+   120
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-01-07T09:39:07+00:00"
+   },
+   "text": "I fully agree with the issues you mention of using XML configuration in Spring. \nThere are alternatives, one of which called JavaConfig which allows you to write the configuration in Java, with all the advantages that comes with it. \nCheck out javaconfig here:\nhttp://www.springframework.org/javaconfig\n\nAnd here's an interesting video presentation on \"Ways to configure the Spring container\"\n\nhttp://www.parleys.com/display/PARLEYS/Ways+to+configure+the+Spring+container\n\nCheers,\nV.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Vito",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "streaming-xpath-with-sax",
+   "blog_comment",
+   14
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-02-12T20:14:00+00:00"
+   },
+   "text": "<strong>Streaming XPath? You don't stream trees!</strong>\n\nMartin  , I am aware that you can process a subset of XPath and XQuery using a streaming processor (there is a BEA-sponsored project that does that for XQuery), but this is not the way you tend to think when working with streaming XML.\n \nFor streaming XML",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "Software Documentation Weblog",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/page/lars/20050212#streaming_xpath_you_don_t"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "tail-recursion-in-xquery",
+   "blog_comment",
+   45
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-02-08T08:04:02+00:00"
+   },
+   "text": "Hi Martin,\n\n  minor nit-picking: the f(0) in local:foo should be local:foo(0).\n\nWhile I agree with your analysis of conformance concerns, I stumbled across your statement \"To enable this, the path to the tail call within the function must only contain if/else or sequence (\",\") operators ...\".\n\nIn which way is '+' different to ',' when it comes to tail calls?  Would the recursive call in\n\ndeclare function local:bar($x as xs:integer) as xs:integer*\n{\n  if ($x eq 0) then () else ($x, local:bar($x - 1))\n}\n\nbe considered a tail call by X-Hive/DB?\n\nCheers,\n   --Torsten",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Torsten Grust",
+   "updated": null,
+   "authorUrl": "http://www-db.in.tum.de/~grust/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "tail-recursion-in-xquery",
+   "blog_comment",
+   46
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-02-08T08:57:23+00:00"
+   },
+   "text": "The '+' operator needs the righthand value to calculate the result, whereas the ',' operator just appends. This way you can evaluate the method body if you just remember that you have to insert something at the end, so your local:bar() would be considered tail callable (and it is, indeed).",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "tail-recursion-in-xquery",
+   "blog_comment",
+   47
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-02-08T09:12:23+00:00"
+   },
+   "text": "Aha, thanks for the explanation.  What about this variant of loca:bar() then?\n\ndeclare function local:bar($x as xs:integer) as xs:integer*\n{\nif ($x eq 0) then () else (local:bar($x - 1), $x)\n}\n\nIn Haskell terms, are the left and right sections of ',' treated alike when it comes to tail callability?\n\nKind regards,\n   --Torsten",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Torsten Grust",
+   "updated": null,
+   "authorUrl": "http://www-db.in.tum.de/~grust/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "tail-recursion-in-xquery",
+   "blog_comment",
+   48
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-02-08T09:57:50+00:00"
+   },
+   "text": "No. It's probably possible to get that working (with the amount of work needed varying depending on your internal processing model), however we don't do that. Tail Calls are expected to happen at the tail, so we can just append the values, otherwise you'd have to remember positions in the stream, which (at least for us) greatly complicates the thing and might defeat the purpose ...",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "tail-recursion-in-xquery",
+   "blog_comment",
+   49
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-02-08T10:58:54+00:00"
+   },
+   "text": "OK, so in a sense X-Hive/DB implements a variant of 'tail call modulo cons' as introduced by David Warren (of WAM fame): here, the role of the cons head is played by the RHS argument of ','.\n\nThanks for the discussion, Martin.\n   --Torsten",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Torsten Grust",
+   "updated": null,
+   "authorUrl": "http://www-db.in.tum.de/~grust/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "taking-the-xml-out-of-xml",
+   "blog_comment",
+   15
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-02-13T18:09:31+00:00"
+   },
+   "text": "<strong>Which XML data model do you think of?</strong>\n\nMartin, I think you have spent too much time implementing an application that uses the official XML Informationset data model. But there is more than DOM and trees, e.g. SAX. In some sense SAX is  XML without XML Infoset  , this might be one reason why it",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "Software Documentation Weblog",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/page/lars/20050213#which_xml_data_model_do"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "taleo-e-recruitement",
+   "blog_comment",
+   391
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-10-09T08:34:37+00:00"
+   },
+   "text": "Hi Martin,\n\nYou are directing your complaints at the wrong target. You should be complaining about the company that uses this crappy software. Taleo is not going to care about your opinion. They will only be interested in whether people buy there software and apparently they do.\n\nIf anybody cares about your opinion, it will be the company that is trying to hire people. So what you should be saying is: \"Company X uses crappy software and drives away potential job applicants.\", no matter who is creating said software.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Bas de Bakker",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "taleo-e-recruitement",
+   "blog_comment",
+   392
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-10-09T08:40:35+00:00"
+   },
+   "text": "You're right Bas, but I already had my share of complaining in a feedback survey at the company. Of course they are to blame for the software they actually use on their applicants, but I still find the marketing claims of Taleo to be in a sterk contrast with the actual tool...",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin Probst",
+   "updated": null,
+   "authorUrl": "http://www.martin-probst.com/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "techwriter-wiki",
+   "blog_comment",
+   4
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2004-11-28T11:51:38+00:00"
+   },
+   "text": "<strong>German Wiki for Technical Writers</strong>\nDer Schockwellenreiter  announces a  German Wiki for Technical Writers and Translators . [via  Martin Probst ]",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "Software Documentation Weblog",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/page/lars/20041128#german_wiki_for_technical_writers"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "the-mac-mini-sucks",
+   "blog_comment",
+   6
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-02-17T12:39:11+00:00"
+   },
+   "text": "ya, all macs suck.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Fred",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "the-mac-mini-sucks",
+   "blog_comment",
+   7
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-06-13T21:40:32+00:00"
+   },
+   "text": "I love macs, have used them for over 35 years,  but this mac mini duo is the worst thing ever.   (maybe it's the intel inside).....  I've had two logic boards replaced and still no luck... and they won't give me my $$ back...\n\njesus",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Susan Semenick",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "threads-vs-processes-in-java-co",
+   "blog_comment",
+   182
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-04-11T12:02:50+00:00"
+   },
+   "text": "Nice post! I just want to add something I recently came across: The webserver Yaws, written in Erlang:\n\nhttp://yaws.hyber.org/\n\nIt specifically aims at solving these problems, ie. being able to scale up with many concurrent requests, because the language Erlang itself is designed for that. Most importantly, it doesn't use threads or processes of the underlying. I have no experience myself, but this article, showing that Yaws can handle 80000 concurrent HTTP requests, whereas the Apache webserver simply dies at around 4000, makes Yaws look very impressing:\n\nhttp://www.sics.se/~joe/apachevsyaws.html\n\nMaybe the definition of \"stateless code parts\" - as you request it - can be found in Erlang.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Alexander Klimetschek",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/alexkli/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "threads-vs-processes-in-java-co",
+   "blog_comment",
+   183
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-04-11T12:10:49+00:00"
+   },
+   "text": "Thanks Alex.\n\nI'm aware of Erlang and YAWS. And indeed, the \"stateless code parts\" pattern is very dominant in Erlang - Erlang is a purely functional language. State in Erlang happens mainly through tail recursion. Except for those parts, all code is by definition stateless and thus easy to share.\n\nErlang also doesn't have thread locking/synchronization, so you can always easily kill single actors.\n\nSo Erlang would indeed be a candidate, but the language itself is IMHO really bad. Nothing against functional programming, but useful programs do have state, and getting that state is really painful in Erlang. Plus it's totally antiquated, with strings being represented as integer lists and such...\n\nI'd hope to port the benefits of certain Erlang properties & idioms to a more mainstream language and runtime like Java.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin Probst",
+   "updated": null,
+   "authorUrl": "http://www.martin-probst.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "threads-vs-processes-in-java-co",
+   "blog_comment",
+   190
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-04-12T11:47:23+00:00"
+   },
+   "text": ">I'd hope to port the benefits of certain\n>Erlang properties & idioms to a more\n>mainstream language and runtime like\n>Java.\nmaybe Scala is the right language for those kind of experiments even if its not (yet) mainstream.\n\n\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "mbien",
+   "updated": null,
+   "authorUrl": "http://www.michael-bien.com/roller/mbien"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "threads-vs-processes-in-java-co",
+   "blog_comment",
+   213
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-04-14T00:48:25+00:00"
+   },
+   "text": "If you're in the Java world already, <a href=\"http://terracotta.org\">Terracota</a> can provide some interesting possibilities to write in normal Java yet spread your work across processes or threads as you desire.  Terracotta by itself doesn't handle the notion of spawning/killing processes but does support all of the shared memory / coordination aspects.\n\nI've actually built a distributed testing framework that ties together Groovy scripted agents with Terracotta and some Java code to manage testing agents and so forth, which worked really well.  (Soon to be open-sourced and publicized.)\n\nYes, I work for Terracotta.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Alex Miller",
+   "updated": null,
+   "authorUrl": "http://tech.puredanger.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "threads-vs-processes-in-java-co",
+   "blog_comment",
+   216
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2008-04-14T07:43:53+00:00"
+   },
+   "text": "@Alex:\nto me, Terracotta appears to take the way the other way around: instantiate the application software for each node (or process, the unit of failure anyways), but then distribute the instances of the domain model objects over a set of nodes. Which I think is very worthwhile, but still somehow the other way around ;-)\n\nI should read up on Terracotta a bit, I'm interested in how you guys handle application failure (and also the whole thing seems to be very cool in general).\n\n@mbien:\nI've been there. But Scala doesn't really solve the problems Erik's and my article were about. The actors implementation there is cool, but I'm still sceptical if Scala doesn't add too much complexity for the benefits it brings.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin Probst",
+   "updated": null,
+   "authorUrl": "http://www.martin-probst.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "tomcat-startup-timeouts-in-eclipse",
+   "blog_comment",
+   32003
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2011-10-05T20:39:21.070000+00:00"
+   },
+   "text": "Thanks for you advice!\r\nIt does not work in my case unfortunately, however :-(\r\nI closed eclipse, restarted it, re added my Tomcat 6 - Server but it still gave the exception when debugging.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Konrad Höffner",
+   "updated": null,
+   "authorUrl": "http://konradhoeffner.de/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "translation-of-domain-specific-terms-dont-do-it",
+   "blog_comment",
+   51
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-06-12T20:40:24+00:00"
+   },
+   "text": "ich bedanke mich bei Ihnen für Ihre Reaktionen auf meinem Blog. Ja, leider gab's einen Fehler mit Kahn statt Lahm. Verwechslung mit Lehmann war jedoch ausgeschlossen, denn es wurde nicht über die Torhüter, sondern über die Stürmer geschrieben.\nMit herzlichen Grüßen,\nSebastian\nPS: ich wusste nicht, dass Sie ein IT-Profi sind. Gratuliere!",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "sebastian",
+   "updated": null,
+   "authorUrl": "http://duits.skynetblogs.be/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "usability-of-command-line-interfaces",
+   "blog_comment",
+   43
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-02-03T11:57:27+00:00"
+   },
+   "text": "<strong>This week in the world of the Command Line; The Friday Round up!</strong>\n\n\tPackage Management in Mac OS X&#8230; in Japanese! \n\tA user has featured one of my posts with comments/criticisms in a post in a Japanese blog, I have no idea what he is saying, however Google Translator does attempt to make sense of it.\n\tGentoo VS De...",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "Command Line Warriors",
+   "updated": null,
+   "authorUrl": "http://commandline.org.uk/2006/this-week-in-the-world-of-the-command-line-the-friday-round-up/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "where-is-the-glue-in-loose-coupling-with-rest",
+   "blog_comment",
+   54
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-01-20T05:45:38+00:00"
+   },
+   "text": "In summary, Loose Coupling in a system presents itself in different dimensions. To define a \"spectrum\" of loose coupled-ness requires one to consistently measure on the same axis.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "david law",
+   "updated": null,
+   "authorUrl": "http://www.evision.com.pk/web-maintenance.html"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "why-do-xml-apis-suck",
+   "blog_comment",
+   8
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-02-09T02:16:03+00:00"
+   },
+   "text": "Someone in the wild (not an XQuery stakeholder) who likes the idea of XQuery as a programming language!  Interesting thoughts, and I agree with the basic thrust that XML support should evolve into languages with first-class support for tree-structured data and the XPath-like operations on the trees.  The static vs dynamic issue seems to be very dependent on use case -- with XML that is very much like serialized objects, static typing is a Good Thing; for loosely structured documents, it tends to get in the way.\n\nMy bias is that XQuery is a Good Thing ... as an XML Query Language. I'm very skeptical about it as a programming language:  First,it is currently read only; what interesting things can you do besides extract information? Second, it is burdened by the XSD type system, which has few friends and many people who detest it.    Finally, it is no less science fiction-y than the alternatives -- NONE of this has been proven with serious applications in practice.  \n\nBasically, Microsoft shared your opinion of XQuery a couple of years ago, invested heavily in making it real, and became disillusioned as the problems multiplied. Maybe others will have better success, but until then .... \n ",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Mike Champion",
+   "updated": null,
+   "authorUrl": "blog.msdn.com/mikechampion"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "why-do-xml-apis-suck",
+   "blog_comment",
+   9
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-02-09T10:25:13+00:00"
+   },
+   "text": "I'm sorry Mike, I am an XQuery stakeholder. I've been implementing it for the last 6 months so it's not really someone from the wild you're talking to.\n\nI don' really agree to your skepticism though, I think XQuery has the chance to really take off as a good interface to XML data. Working implementations are already available (e.g. Saxon, but many proprietary products too) and they will start to attract a user base. XQuery is a lot easier to handle than XSLT and I really think users are waiting for something like this.\n\nThere still have things to be done, like modifying queries and possibly in the future a standardized way of connecting XQuery and imperative languages in a better (closer and more native) way than JDBC.\n\nAFAIK there are already proprietary extensions to XQuery to provide update facilities in Tamino so a standard for doing that seems to be really needed.\n\nXSD does suck somehow, but after all it's what everyone is using.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "why-do-xml-apis-suck",
+   "blog_comment",
+   10
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-02-11T22:18:38+00:00"
+   },
+   "text": "<strong>XPath is a nice DOM wrapper, but what to do about SAX?</strong>\n\nMartin Probst  complaints about overly complex XML-APIs  and recommends the use of XQuery as a language that can be used to work with XML data programatically, that does not suck. \n\n In most cases XQuery is more than people need in their applications. I",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "Software Documentation Weblog",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/page/lars/20050211#xpath_is_a_nice_dom"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "wide-finder-in-scala",
+   "blog_comment",
+   61
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-09-25T16:13:47+00:00"
+   },
+   "text": "<p>How long did the Ruby take to execute on your machine?</p>\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Erik Engbrecht",
+   "updated": null,
+   "authorUrl": "http://erikengbrecht.blogspot.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "wide-finder-in-scala",
+   "blog_comment",
+   62
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-10-16T12:16:16+00:00"
+   },
+   "text": "<p>[...] Datei in den Speicher. Seine verbesserte Lösung beseitigt dieses Problem. Martin Probst liefert die Scala-Variante, Santiago Gala verwendet Python und den bereits in der letzten Kolumne erwähnten [...]</p>\n",
+   "kind": "PINGBACK",
+   "approved": false,
+   "author": "JavaSPEKTRUM Blogosphäre &raquo; Blog Archiv &raquo; Blogosphäre (aus JavaSPEKTRUM 06/07)",
+   "updated": null,
+   "authorUrl": "http://www.sigs.de/blog/js/?p=32"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "wide-finder-in-scala",
+   "blog_comment",
+   66
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-11-24T08:54:50+00:00"
+   },
+   "text": "Shortly before I stumbled across this post, I wrote a Scala Actor MapReduce solution. Would you be willing to share with me your access logs? You can fax me a NDA if you'd like ;-). Up until now I've been fudging the logs. Would be nice to try my code out on something legit. Perhaps we can compare notes.\n\nOh, and if I understand your code correctly, LogMatcher's code for incrementing isn't threadsafe. I used AtomicInteger and some trickery",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Daniel Green",
+   "updated": null,
+   "authorUrl": "http://octoberdan.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "wide-finder-in-scala",
+   "blog_comment",
+   67
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2007-11-24T09:44:52+00:00"
+   },
+   "text": "My code has changed since the above version quite significantly, but I think the Actor code here is correct - the counts hashmap exists for each Actor, and within a single Actor only one Thread executes at any time, so there should not be a problem there.\n\nYou can find the logs I used at Tim Bray's site: <a href=\"http://www.tbray.org/tmp/o10k.ap\">http://www.tbray.org/tmp/o10k.ap</a>",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin Probst",
+   "updated": null,
+   "authorUrl": "http://www.martin-probst.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "writing-strategy",
+   "blog_comment",
+   31
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-07-16T22:03:15+00:00"
+   },
+   "text": "<strong>Technical Writing Links for 07-16-2005</strong>\n\nKeith Soltys :  Tongue-in-cheek style guide  \n \n  Darren Barefoot :  Should I Become a Technical Writer?  \n \n  Will Kelly :  The Swept Along Technical Writer  \n \n \nand\n \n  Martin Probst :  Writing Strategy  \n \n \n \n   While he is talking about how to write",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "Software Documentation Weblog",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/page/lars/20050716#technical_writing_links_for_07"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "xml-editor-for-eclipse",
+   "blog_comment",
+   27
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-07-08T13:16:01+00:00"
+   },
+   "text": "oxgen is priced less than 150 € and you should ask your employer to buy it, because it will increase your productivity.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Lars Trieloff",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/page/lars"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "xml-editor-for-eclipse",
+   "blog_comment",
+   28
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-07-10T06:54:15+00:00"
+   },
+   "text": "Martin's employer already has a Oxygen license which is in use by me :-) But I'll give the WTP XML Editor a try: nothing beats having 4 to 5 XML editors at hand, esp. as all of them usually s*ck in one aspect or the other, e.g. \"formatting and indenting\" in Oxygen.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Irsan Widarto",
+   "updated": null,
+   "authorUrl": "http://www.x-hive.com"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "xml-editor-for-eclipse",
+   "blog_comment",
+   29
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-07-22T08:23:25+00:00"
+   },
+   "text": "It took me years to find an XML editor that could knock down emacs+psgml mode as my preferred editor. Then I came across XMLMind and their XML Editor: http://www.xmlmind.com/xmleditor/ It's cheap (in fact, there's a free version that will be enough for most people) and extremely extensible.\n\nAnd no, I'm not affiliated with the company in any way :o)",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Claus Rasmussen",
+   "updated": null,
+   "authorUrl": "http://techwriter.dk/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "xml-editor-for-eclipse",
+   "blog_comment",
+   30
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-07-22T09:58:37+00:00"
+   },
+   "text": "I know that editor, and I really like it, especially for DocBook. But it's not integrated with Eclipse, so it doesn't really fit my work environment ... apart from having to run another JVM it wouldn't give me all the goodies Eclipse integration has (building, SVN, ...)",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "xml-encoding-problems",
+   "blog_comment",
+   11
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-02-09T19:51:39+00:00"
+   },
+   "text": "That is indeed another \"double-escaping\" problem. Though a schema aware parser should read that and interprete it as a <weblogname/> whichs contents are an instance of xsd:string, shouldn't it?",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Martin",
+   "updated": null,
+   "authorUrl": ""
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "xml-encoding-problems",
+   "blog_comment",
+   12
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-02-09T20:22:50+00:00"
+   },
+   "text": "Essentially a \"shema aware processor\" is the bulk of what a web service toolkit is, and I contributed heavily to one of these: Apache Axis.\n\nThe short answer to your question is: yes, but a more complete answer is that writing such a schema aware parser turns out to be a real PITA.  Axis is written in Java, and can use a JAXP compliant SAX parser (like Apache Xerces) which takes care of a lot of namespace administrivia.  A good portion of this must be duplicated in Apache Axis in order to handle this one attribute.",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Sam Ruby",
+   "updated": null,
+   "authorUrl": "http://www.intertwingly.net/blog/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "xml-encoding-problems",
+   "blog_comment",
+   13
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-02-09T18:59:25+00:00"
+   },
+   "text": "My problem is not with namepaces in general, but with a specific application, best described by an example.  Take a look at http://www.soapware.org/weblogsCom\n\nThe envelope in the first example declares five namespaces.  Only four are ever used, but that is OK.  I'd like to focus on the xsd namespace.  It is not used in association with the name of any element, or with the name of any attribute, it is only used WITHIN A STRING.\n\nA general purpose XML parser can help by keeping track of namespaces and expanding the prefixes for you.  However, it can't know whether or not the colon within the string is significant.  It can only provide a parsed document.  This means that not only does the parser need to keep track of namespaces, but the caller does too.\n\n\n",
+   "kind": "COMMENT",
+   "approved": false,
+   "author": "Sam Ruby",
+   "updated": null,
+   "authorUrl": "http://www.intertwingly.net/blog/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "xml-file-types",
+   "blog_comment",
+   16
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2005-03-06T18:54:29+00:00"
+   },
+   "text": "<strong>Mime types in your file system</strong>\n\nMartin Probst  fights against  Eclipse's insensitivity of different file types with identical filename extensions  . Operating Systems like Mac OS X do not rely on file name extensions and GNOME already supports a mime type system for the filesystem. ...",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "Software Documentation Weblog",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/page/lars/20050306#mime_types_in_your_file"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "xml-size-statistics",
+   "blog_comment",
+   3
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2004-11-28T12:59:41+00:00"
+   },
+   "text": "<strong>Who needs size statistics</strong>\nMartin , no one needs size statistics, when one can use containers with growing size. To estimate the ideal container size, two characteristics are important: What is the maximum overhead for the container and what is the minimum overhead. \n Large Contai",
+   "kind": "TRACKBACK",
+   "approved": false,
+   "author": "Software Documentation Weblog",
+   "updated": null,
+   "authorUrl": "http://weblogs.goshaky.com/weblogs/page/lars/20041128#who_needs_size_statistics"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "xquery-as-a-web-scripting-language",
+   "blog_comment",
+   50
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-05-16T20:43:03+00:00"
+   },
+   "text": "[...] Pretty wild idea by Martin Probst. [...]",
+   "kind": "PINGBACK",
+   "approved": false,
+   "author": "Todd Ditchendorf&#8217;s Blog &raquo; Blog Archive &raquo; XQuery as Web Scripting language",
+   "updated": null,
+   "authorUrl": "http://www.ditchnet.org/wp/2006/05/16/xquery-as-web-scripting-language/"
+  }
+ },
+ {
+  "key": [
+   "blog_post",
+   "xquery-too-complex",
+   "blog_comment",
+   40
+  ],
+  "properties": {
+   "created": {
+    "$datetime": "2006-06-20T07:11:36+00:00"
+   },
+   "text": "[...] Some time ago I commented on Uche Ogbuji describing XQuery as too complex. Now Dare Obasanjo writes this: The lessons listed above seem rather self evident and obvious yet it s a sad fact of the software industry that the mistakes of CORBA keep getting made all over again. Core XML technologies like W3C XML Schema and XQuery are &#8217;standards&#8217; without a reference implementation which invented new features by committee instead of standardizing best practice. [...]",
+   "kind": "PINGBACK",
+   "approved": false,
+   "author": "Martins Notepad &raquo; Blog Archive &raquo; The ability to say no",
+   "updated": null,
+   "authorUrl": "http://www.martin-probst.com/2006/06/20/the-ability-to-say-no/"
+  }
+ }
+]

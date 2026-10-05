@@ -1,0 +1,9 @@
+[
+ {
+  "author": "n/a",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "&gt; there is a bug where having a plugin installed in some version \n&gt; conflicts with building it\n\nAre your target platform (see PDE preferences) and your working copy of Eclipse (one which is used for coding)  the same? If yes, then try to split them. Develop your code using one copy of Eclipse installation, build code against another one. It should solve many problems.",
+  "created": "2006-06-26T13:20:19+00:00"
+ }
+]

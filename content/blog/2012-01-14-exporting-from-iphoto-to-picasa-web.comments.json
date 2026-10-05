@@ -1,0 +1,9 @@
+[
+ {
+  "author": "Blair Zajac",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "We had a power outage in our house when we were on vacation and couldn't ssh to our server, which is scary since you don't know what's going on.  Since then, we signed up for CrashPlan to backup all our data to the cloud.  It backs up Macs, Linux and Windows systems.  Still use TimeMachine and rsync for backups at our home between systems, but CrashPlan is for when everything goes.",
+  "created": "2012-01-15T01:39:23.966000+00:00"
+ }
+]

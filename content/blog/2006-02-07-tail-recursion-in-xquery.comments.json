@@ -1,0 +1,37 @@
+[
+ {
+  "author": "Torsten Grust",
+  "url": "http://www-db.in.tum.de/~grust/",
+  "kind": "COMMENT",
+  "text": "Hi Martin,\n\n  minor nit-picking: the f(0) in local:foo should be local:foo(0).\n\nWhile I agree with your analysis of conformance concerns, I stumbled across your statement \"To enable this, the path to the tail call within the function must only contain if/else or sequence (\",\") operators ...\".\n\nIn which way is '+' different to ',' when it comes to tail calls?  Would the recursive call in\n\ndeclare function local:bar($x as xs:integer) as xs:integer*\n{\n  if ($x eq 0) then () else ($x, local:bar($x - 1))\n}\n\nbe considered a tail call by X-Hive/DB?\n\nCheers,\n   --Torsten",
+  "created": "2006-02-08T08:04:02+00:00"
+ },
+ {
+  "author": "Martin",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "The '+' operator needs the righthand value to calculate the result, whereas the ',' operator just appends. This way you can evaluate the method body if you just remember that you have to insert something at the end, so your local:bar() would be considered tail callable (and it is, indeed).",
+  "created": "2006-02-08T08:57:23+00:00"
+ },
+ {
+  "author": "Torsten Grust",
+  "url": "http://www-db.in.tum.de/~grust/",
+  "kind": "COMMENT",
+  "text": "Aha, thanks for the explanation.  What about this variant of loca:bar() then?\n\ndeclare function local:bar($x as xs:integer) as xs:integer*\n{\nif ($x eq 0) then () else (local:bar($x - 1), $x)\n}\n\nIn Haskell terms, are the left and right sections of ',' treated alike when it comes to tail callability?\n\nKind regards,\n   --Torsten",
+  "created": "2006-02-08T09:12:23+00:00"
+ },
+ {
+  "author": "Martin",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "No. It's probably possible to get that working (with the amount of work needed varying depending on your internal processing model), however we don't do that. Tail Calls are expected to happen at the tail, so we can just append the values, otherwise you'd have to remember positions in the stream, which (at least for us) greatly complicates the thing and might defeat the purpose ...",
+  "created": "2006-02-08T09:57:50+00:00"
+ },
+ {
+  "author": "Torsten Grust",
+  "url": "http://www-db.in.tum.de/~grust/",
+  "kind": "COMMENT",
+  "text": "OK, so in a sense X-Hive/DB implements a variant of 'tail call modulo cons' as introduced by David Warren (of WAM fame): here, the role of the cons head is played by the RHS argument of ','.\n\nThanks for the discussion, Martin.\n   --Torsten",
+  "created": "2006-02-08T10:58:54+00:00"
+ }
+]

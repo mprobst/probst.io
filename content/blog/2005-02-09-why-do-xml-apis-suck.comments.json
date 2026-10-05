@@ -1,0 +1,23 @@
+[
+ {
+  "author": "Mike Champion",
+  "url": "blog.msdn.com/mikechampion",
+  "kind": "COMMENT",
+  "text": "Someone in the wild (not an XQuery stakeholder) who likes the idea of XQuery as a programming language!  Interesting thoughts, and I agree with the basic thrust that XML support should evolve into languages with first-class support for tree-structured data and the XPath-like operations on the trees.  The static vs dynamic issue seems to be very dependent on use case -- with XML that is very much like serialized objects, static typing is a Good Thing; for loosely structured documents, it tends to get in the way.\n\nMy bias is that XQuery is a Good Thing ... as an XML Query Language. I'm very skeptical about it as a programming language:  First,it is currently read only; what interesting things can you do besides extract information? Second, it is burdened by the XSD type system, which has few friends and many people who detest it.    Finally, it is no less science fiction-y than the alternatives -- NONE of this has been proven with serious applications in practice.  \n\nBasically, Microsoft shared your opinion of XQuery a couple of years ago, invested heavily in making it real, and became disillusioned as the problems multiplied. Maybe others will have better success, but until then .... \n ",
+  "created": "2005-02-09T02:16:03+00:00"
+ },
+ {
+  "author": "Martin",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "I'm sorry Mike, I am an XQuery stakeholder. I've been implementing it for the last 6 months so it's not really someone from the wild you're talking to.\n\nI don' really agree to your skepticism though, I think XQuery has the chance to really take off as a good interface to XML data. Working implementations are already available (e.g. Saxon, but many proprietary products too) and they will start to attract a user base. XQuery is a lot easier to handle than XSLT and I really think users are waiting for something like this.\n\nThere still have things to be done, like modifying queries and possibly in the future a standardized way of connecting XQuery and imperative languages in a better (closer and more native) way than JDBC.\n\nAFAIK there are already proprietary extensions to XQuery to provide update facilities in Tamino so a standard for doing that seems to be really needed.\n\nXSD does suck somehow, but after all it's what everyone is using.",
+  "created": "2005-02-09T10:25:13+00:00"
+ },
+ {
+  "author": "Software Documentation Weblog",
+  "url": "http://weblogs.goshaky.com/weblogs/page/lars/20050211#xpath_is_a_nice_dom",
+  "kind": "TRACKBACK",
+  "text": "<strong>XPath is a nice DOM wrapper, but what to do about SAX?</strong>\n\nMartin Probst  complaints about overly complex XML-APIs  and recommends the use of XQuery as a language that can be used to work with XML data programatically, that does not suck. \n\n In most cases XQuery is more than people need in their applications. I",
+  "created": "2005-02-11T22:18:38+00:00"
+ }
+]

@@ -1,0 +1,23 @@
+[
+ {
+  "author": "Richard Metzler",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "There is one simple reason for telling people to write an interface for EVERY class. This keeps poor developers from implementing and using a lot of static methods and other crappy stuff.\n\nI'm pleading guilty of using FooImpl from time to time. FooImpl says: \"I am the first and very simple implementation. There is maybe a 50/50 chance that you will implement another class for my interface.\"\n\nUsually when I use FooImpl, I write the simple implementation first and generate interface Foo from that. I may write a next class implementing Foo, but in this case I usually rename FooImpl to something better suited.\n\nI see the awkwardness in this, but I feel like this is typical Java.\n\nAnd what JP mentions, the I-prefix for interfaces. This is something that makes sense to me, but I rarely do it. Maybe I should try to get used to this.\n\nHave a nice day,\n\nRiche",
+  "created": "2008-05-20T20:44:33+00:00"
+ },
+ {
+  "author": "Martin Probst",
+  "url": "http://www.martin-probst.com",
+  "kind": "COMMENT",
+  "text": "Richie: I don't really like forcing developers into certain style guides. Sometimes it appears to be necessary - but if you have really bad developers, you're code base is going to be a mess anyways.\n\nAnd you're right, it is typical Java. But I think I could have a lot more fun writing Java if people wouldn't do this stupid anti-pattern stuff all the time.",
+  "created": "2008-05-21T05:08:55+00:00"
+ },
+ {
+  "author": "Richard Metzler",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "I certainly would have a lot more fun if I would be allowed to write Ruby. But I guess, than some of my fellow developers would mess up much more than they do anyways.\n\nAnd I came up with another reason: J2EE / JEE, JMX and so on teach you more or less to write an interface and exactly one implementation. Some of these frameworks force you to use a certain namescheme for interface and implementation, sometimes it's a convention. None of them use FooImpl but this style is encouraged through these frameworks and some books.\n\nI'm not saying using FooImpl all the time is a good thing, but there are much bigger problems out there.",
+  "created": "2008-05-21T11:38:46+00:00"
+ }
+]

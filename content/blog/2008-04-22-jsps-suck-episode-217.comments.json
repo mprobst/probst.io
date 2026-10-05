@@ -1,0 +1,16 @@
+[
+ {
+  "author": "Richard Metzler",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "ehrlich, solange du die Wahl hast: nimm keine JSPs und mach nichts mit JSF. (Auch wenn in meiner Firma das mit zum Entwicklungsstack gehoert.) Wenn nicht jede Seite wirklich gleich aussehen muss und man kein Portal oder so baut, nimm lieber einen Templating-Ansatz bei dem nichts kompiliert werden muss. Die Entwicklungszeit ist einfach viel kürzer, wenn man nicht ständig den Server neu starten muss um ein paar Kleinigkeiten zu ändern.\nViele Grüße,\nRichard\n",
+  "created": "2008-04-22T15:28:52+00:00"
+ },
+ {
+  "author": "Alexander Klimetschek",
+  "url": "http://weblogs.goshaky.com/weblogs/alexkli/",
+  "kind": "COMMENT",
+  "text": "@Martin:\n\nYou could use JSP comments:\n\n<%-- ... --%>\n\n@Richard:\n\nNormalerweise sollte das Framework JSPs automatisch neu kompilieren, sobald sie sich geändert haben. So ist es seit je her vorgesehen...",
+  "created": "2008-04-23T01:14:22+00:00"
+ }
+]

@@ -1,0 +1,16 @@
+[
+ {
+  "author": "Bas de Bakker",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "I came up with using a DTD in this particular XSLT file. It makes editing the file in a DTD-aware XML editor much easier.",
+  "created": "2007-01-22T13:27:42+00:00"
+ },
+ {
+  "author": "Martins Notepad » Blog Archive » Type inference for Java",
+  "url": "http://www.martin-probst.com/2007/04/17/type-inference-for-java/",
+  "kind": "PINGBACK",
+  "text": "<p>[...] Java files tend to get enormous in size, even for really mundane tasks. This is partially due to bad APIs (I blogged about my experience of putting an XSLT transformation in a self-contained JAR). The other part is just the language itself. I&#8217;d really hope that good type inference could solve a lot of the ugly to read code. It will require quite a change in how to write APIs, i.e. be more explicit on the return type of things in the method name. [...]</p>\n",
+  "created": "2007-04-17T22:23:23+00:00"
+ }
+]

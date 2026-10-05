@@ -1,0 +1,23 @@
+[
+ {
+  "author": "Software Documentation Weblog",
+  "url": "http://weblogs.goshaky.com/weblogs/page/lars/20050329#rss_rest_soap_and_soa",
+  "kind": "TRACKBACK",
+  "text": "<strong>RSS, REST, SOAP and SOA</strong>\n\nMartin Probst  does his best to fulfill is buzzword-quota. He shows his thoughts on  Applied XML in RSS, SOA(P) and REST  . \n \nThere are two responses for his article. I do not think that  REST  ?  will suffer from the same problems as  RSS  ? , as it is ",
+  "created": "2005-03-29T20:04:18+00:00"
+ },
+ {
+  "author": "Alexander Klimetschek",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "I agree with you on the basic XML problems, mainly encoding, that will be much more prominent if no toolkit is used and everything is done by hand. My personal opinion is that this is due to a complicated encoding mechanism used in XML with tons of variants that I never understood - reading a 100-page Unicode tutorial might help but I didn't come so far yet.... If I'd just be able to insert plain german Umlauts like ä, ö and ü inside an XML document!\n\nWell, I'm drifting away. What I see as the advantage of the REST approach (and the web), is that you keep everything simple - KISS(TM). If you *really* do that, you won't get a large API with lots of methods and the problem of documentation is very small - as you already mention. The key point of REST over toolkits like SOAP is that they should be used when a manual approach is simpler and you are able to customize it to your needs. It might be a bit like it is with XML parsing/access APIs: no one likes DOM or SAX really, there exist alternatives for all programming languages that fit more to the environment and make use of the language's features (examples are REXML for Ruby - http://www.germane-software.com/software/rexml/ - and the great DAX for Java - http://www.asciiarmor.com/blog/default/?permalink=Introducing_DAX.txt).\n\nWell, just some thoughts, REST is actually completely new to me, just read a few articles so far.",
+  "created": "2005-03-30T20:43:06+00:00"
+ },
+ {
+  "author": "Migs Paraz - Random Takes",
+  "url": "http://migs.paraz.com/w/archives/2005/10/21/atom-store-and-the-atomverse/",
+  "kind": "TRACKBACK",
+  "text": "<strong>Atom Store and the Atomverse</strong>\n\n\tDreaming of an Atom Store: A Database for the Web describes a database of structured information, Atom enabled for content publishing and retrieval, and REST for applications. See Applied XML in RSS, SOA(P) and REST.\n\tIf more timely information source...",
+  "created": "2005-10-21T11:27:29+00:00"
+ }
+]

@@ -1,0 +1,9 @@
+[
+ {
+  "author": "Martin Probst's Weblog",
+  "url": "http://www.martin-probst.com/blog/2007/11/29/content-sanitation-html5lib-and-i-t-rn-ti-n-liz-ti-n",
+  "kind": "TRACKBACK",
+  "text": "<h3>Content sanitation, html5lib and Iñtërnâtiônàlizætiøn</h3><p><a href='http://www.martin-probst.com/blog/2007/11/20/new-blog-engine'>As I wrote</a>, I migrated to a handwritten blog engine mainly because I was unsatisfied with the way Wordpress handled my content*. So one of the goals was to properly handle any input HTML and Unicode characters.</p>\n\n\n<h2>Un",
+  "created": "2007-11-29T16:14:00+00:00"
+ }
+]

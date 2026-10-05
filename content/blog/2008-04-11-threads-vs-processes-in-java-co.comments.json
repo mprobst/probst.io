@@ -1,0 +1,37 @@
+[
+ {
+  "author": "Alexander Klimetschek",
+  "url": "http://weblogs.goshaky.com/weblogs/alexkli/",
+  "kind": "COMMENT",
+  "text": "Nice post! I just want to add something I recently came across: The webserver Yaws, written in Erlang:\n\nhttp://yaws.hyber.org/\n\nIt specifically aims at solving these problems, ie. being able to scale up with many concurrent requests, because the language Erlang itself is designed for that. Most importantly, it doesn't use threads or processes of the underlying. I have no experience myself, but this article, showing that Yaws can handle 80000 concurrent HTTP requests, whereas the Apache webserver simply dies at around 4000, makes Yaws look very impressing:\n\nhttp://www.sics.se/~joe/apachevsyaws.html\n\nMaybe the definition of \"stateless code parts\" - as you request it - can be found in Erlang.",
+  "created": "2008-04-11T12:02:50+00:00"
+ },
+ {
+  "author": "Martin Probst",
+  "url": "http://www.martin-probst.com",
+  "kind": "COMMENT",
+  "text": "Thanks Alex.\n\nI'm aware of Erlang and YAWS. And indeed, the \"stateless code parts\" pattern is very dominant in Erlang - Erlang is a purely functional language. State in Erlang happens mainly through tail recursion. Except for those parts, all code is by definition stateless and thus easy to share.\n\nErlang also doesn't have thread locking/synchronization, so you can always easily kill single actors.\n\nSo Erlang would indeed be a candidate, but the language itself is IMHO really bad. Nothing against functional programming, but useful programs do have state, and getting that state is really painful in Erlang. Plus it's totally antiquated, with strings being represented as integer lists and such...\n\nI'd hope to port the benefits of certain Erlang properties & idioms to a more mainstream language and runtime like Java.",
+  "created": "2008-04-11T12:10:49+00:00"
+ },
+ {
+  "author": "mbien",
+  "url": "http://www.michael-bien.com/roller/mbien",
+  "kind": "COMMENT",
+  "text": ">I'd hope to port the benefits of certain\n>Erlang properties & idioms to a more\n>mainstream language and runtime like\n>Java.\nmaybe Scala is the right language for those kind of experiments even if its not (yet) mainstream.\n\n\n",
+  "created": "2008-04-12T11:47:23+00:00"
+ },
+ {
+  "author": "Alex Miller",
+  "url": "http://tech.puredanger.com",
+  "kind": "COMMENT",
+  "text": "If you're in the Java world already, <a href=\"http://terracotta.org\">Terracota</a> can provide some interesting possibilities to write in normal Java yet spread your work across processes or threads as you desire.  Terracotta by itself doesn't handle the notion of spawning/killing processes but does support all of the shared memory / coordination aspects.\n\nI've actually built a distributed testing framework that ties together Groovy scripted agents with Terracotta and some Java code to manage testing agents and so forth, which worked really well.  (Soon to be open-sourced and publicized.)\n\nYes, I work for Terracotta.",
+  "created": "2008-04-14T00:48:25+00:00"
+ },
+ {
+  "author": "Martin Probst",
+  "url": "http://www.martin-probst.com",
+  "kind": "COMMENT",
+  "text": "@Alex:\nto me, Terracotta appears to take the way the other way around: instantiate the application software for each node (or process, the unit of failure anyways), but then distribute the instances of the domain model objects over a set of nodes. Which I think is very worthwhile, but still somehow the other way around ;-)\n\nI should read up on Terracotta a bit, I'm interested in how you guys handle application failure (and also the whole thing seems to be very cool in general).\n\n@mbien:\nI've been there. But Scala doesn't really solve the problems Erik's and my article were about. The actors implementation there is cool, but I'm still sceptical if Scala doesn't add too much complexity for the benefits it brings.",
+  "created": "2008-04-14T07:43:53+00:00"
+ }
+]

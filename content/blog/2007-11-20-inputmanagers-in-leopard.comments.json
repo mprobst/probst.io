@@ -1,0 +1,9 @@
+[
+ {
+  "author": "Alexander Klimetschek",
+  "url": "http://weblogs.goshaky.com/weblogs/alexkli/",
+  "kind": "COMMENT",
+  "text": "The @ sign indicates that additional metadata is available for that file. You can see the list of attributes with \"xattr filename\" and print the value of an attribute with \"xattr -p attrname filename\". Since Tiger Apple's HFS+ is fully metadata capable, see here http://arstechnica.com/reviews/os/macosx-10-4.ars/7",
+  "created": "2007-11-20T23:42:15+00:00"
+ }
+]

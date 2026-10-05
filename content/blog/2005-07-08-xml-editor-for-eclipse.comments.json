@@ -1,0 +1,30 @@
+[
+ {
+  "author": "Lars Trieloff",
+  "url": "http://weblogs.goshaky.com/weblogs/page/lars",
+  "kind": "COMMENT",
+  "text": "oxgen is priced less than 150 € and you should ask your employer to buy it, because it will increase your productivity.",
+  "created": "2005-07-08T13:16:01+00:00"
+ },
+ {
+  "author": "Irsan Widarto",
+  "url": "http://www.x-hive.com",
+  "kind": "COMMENT",
+  "text": "Martin's employer already has a Oxygen license which is in use by me :-) But I'll give the WTP XML Editor a try: nothing beats having 4 to 5 XML editors at hand, esp. as all of them usually s*ck in one aspect or the other, e.g. \"formatting and indenting\" in Oxygen.",
+  "created": "2005-07-10T06:54:15+00:00"
+ },
+ {
+  "author": "Claus Rasmussen",
+  "url": "http://techwriter.dk/",
+  "kind": "COMMENT",
+  "text": "It took me years to find an XML editor that could knock down emacs+psgml mode as my preferred editor. Then I came across XMLMind and their XML Editor: http://www.xmlmind.com/xmleditor/ It's cheap (in fact, there's a free version that will be enough for most people) and extremely extensible.\n\nAnd no, I'm not affiliated with the company in any way :o)",
+  "created": "2005-07-22T08:23:25+00:00"
+ },
+ {
+  "author": "Martin",
+  "url": "",
+  "kind": "COMMENT",
+  "text": "I know that editor, and I really like it, especially for DocBook. But it's not integrated with Eclipse, so it doesn't really fit my work environment ... apart from having to run another JVM it wouldn't give me all the goodies Eclipse integration has (building, SVN, ...)",
+  "created": "2005-07-22T09:58:37+00:00"
+ }
+]
