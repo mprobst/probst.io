@@ -12,16 +12,14 @@ As readers of this blog might know, I've spent quite some time implementing and 
 Something that has always bugged me were my attempts at XQuery parsers. XQuery is a keyword free language that has a truly complex lexical structure, so writing a parser is much more complicated for XQuery than one for, say, Java.
 
 A nice example is this valid (!) query from <a href="http://www.w3.org/TR/xquery-xpath-parsing/">Building a Tokenizer for XQuery</a>:
-<blockquote>
-<pre>
-declare namespace namespace = "http://example.com"; 
-declare union &lt;union>for gibberish {
-   for $for in for return &lt;for>***div div&lt;/for>
-}&lt;/union>, 
-if(if) then then else else- +-++-**-* instance 
-of element(*)* * * **---++div- div -div
-</pre>
-</blockquote>
+> ```
+> declare namespace namespace = "http://example.com";
+> declare union <union>for gibberish {
+>    for $for in for return <for>***div div</for>
+> }</union>,
+> if(if) then then else else- +-++-**-* instance
+> of element(*)* * * **---++div- div -div
+> ```
 
 The * and + signs change meaning in different contexts, and so do the keywords like 'if' themselves. Within XML literals, the lexical structure changes completely. Function calls, type checks and the like are hard to disambiguate. And whitespace is sometimes significant, sometimes not. Quite a mess.
 

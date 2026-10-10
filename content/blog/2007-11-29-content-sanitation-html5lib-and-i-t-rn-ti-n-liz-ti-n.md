@@ -16,11 +16,18 @@ Unicode support turned out to be more tricky than expected. I decided that for a
 First thing is to make sure that really every single part of the tool chain is unicode aware. There is a nice collection of tipps <a href="http://wiki.rubyonrails.org/rails/pages/HowToUseUnicodeStrings">here</a>. In my case, LC_ALL on my server had to be set to en_US.UTF-8, my MySQL tables had somehow been created as non-unicode. The original wordpress database had a totally bizarre mix of unicode and non-unicode columns in every table.
 
 A very useful command in MySQL is
-<pre class="prettyprint">mysql> show create table &lt;tablename>;</pre>
+
+```
+mysql> show create table <tablename>;
+```
+
 Watch out for the DEFAULT ENCODING and per-column encodings.
 
 Also important is to run all mysql scripts with the proper charset set, it appears to default to some latin charset:
-<pre class="prettyprint">mysql -u ... -p --default-character-set=utf8</pre>
+
+```
+mysql -u ... -p --default-character-set=utf8
+```
 
 <h2>HTML</h2>
 

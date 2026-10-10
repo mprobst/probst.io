@@ -8,12 +8,15 @@ comments: 0
 ---
 
 I really wonder why they made java.lang.String.format(String format, Object... args) a static method. Compare:
-<pre class="prettyprint">
+
+```
 String message = String.format("Failed to quizzle the fibble: %s", fibble);
-</pre>
+```
+
 with:
-<pre class="prettyprint">
+
+```
 String message = "Failed to quizzle the fibble: %s".format(fibble);
-</pre>
+```
 
 The latter isn't only more object-oriented (static methods are in effect global procedures), it's also less typing.

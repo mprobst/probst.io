@@ -18,7 +18,8 @@ This is something XQuery was designed for. I took an existing JavaScript tree li
 <h3>index.jsp</h3>
 
 Some quirky HTML and my misguided attempts to create CSS, plus this script code:
-<pre class="prettyprint">
+
+```
   tree=new dhtmlXTreeObject("treeboxbox_tree","100%","100%",0);
   tree.setImagePath("imgs/");
   //set function object to call on node select
@@ -27,68 +28,76 @@ Some quirky HTML and my misguided attempts to create CSS, plus this script code:
   tree.loadXML("tree.jsp");
   function onNodeSelect(nodeId) {
     ajaxpage("content.jsp?id=" + nodeId, "content_box");
-  }</pre>
-  ... which just tells the JavaScript library to use tree.jsp for the tree and content.jsp for the content. Can't get much easier.
+  }
+```
+
+... which just tells the JavaScript library to use tree.jsp for the tree and content.jsp for the content. Can't get much easier.
 
 <h3>content.jsp</h3>
 
 Probably the most trivial query possible:
-<pre class="prettyprint">
-      1 &lt;?xml version="1.0" encoding="utf-8" ?>
-      2 &lt;%@ taglib uri="http://www.xhive.com/taglibs/xhivetags-1.0" prefix="xhtags" %>
-      3 &lt;xhtags:session>
-      4   &lt;xhtags:transaction>
-      5     &lt;xhtags:contextnode contextNodePath="/amm"/>
-      6     &lt;xhtags:xquery>
-      7       //*[@KEY = "&lt;jsp:expression>request.getParameter("id")&lt;/jsp:expression>"]
-      8     &lt;/xhtags:xquery>
-      9     &lt;xhtags:foreach>
-     10       &lt;xhtags:transform styleUrl="amm-common.xsl" />
-     11     &lt;/xhtags:foreach>
-     12   &lt;/xhtags:transaction>
-     13 &lt;/xhtags:session>
-</pre>
+
+```
+      1 <?xml version="1.0" encoding="utf-8" ?>
+      2 <%@ taglib uri="http://www.xhive.com/taglibs/xhivetags-1.0" prefix="xhtags" %>
+      3 <xhtags:session>
+      4   <xhtags:transaction>
+      5     <xhtags:contextnode contextNodePath="/amm"/>
+      6     <xhtags:xquery>
+      7       //*[@KEY = "<jsp:expression>request.getParameter("id")</jsp:expression>"]
+      8     </xhtags:xquery>
+      9     <xhtags:foreach>
+     10       <xhtags:transform styleUrl="amm-common.xsl" />
+     11     </xhtags:foreach>
+     12   </xhtags:transaction>
+     13 </xhtags:session>
+```
+
 This JSP simply imports the X-Hive taglib, opens a session with the database, within that a transaction, takes a context node in the library, runs an XQuery for nodes with a specific ID (the parameter passed as "id") and runs a stylesheet on each of the returned nodes. The necessary configuration (X-Hive database path, DB user and password, cache size) is taken from web.xml.
 
 <h3>tree.jsp</h3>
 
 A simple XQuery to produce the XML format the JavaScript library requires from the document in the database. The library expects something like this:
-<pre class="prettyprint">
-      1 &lt;tree id="0">
-      2   &lt;item id="1" text="foo" child="false"/>
-      3   &lt;item id="2" text="bar" child="true"/>
-      4 &lt;/tree>
-</pre> 
+
+```
+      1 <tree id="0">
+      2   <item id="1" text="foo" child="false"/>
+      3   <item id="2" text="bar" child="true"/>
+      4 </tree>
+```
 
 Which simply means: the tree with the ID "0" (which is an opaque string, it is only expected to be unique) has two children, one with the description "foo" and the other called "bar" and IDs 1 and 2, respectively. The latter has children, too. It also supports fancy stuff like special icons etc., but I left this out for simplicity.
 
 The document which is queried roughly looks like this:
-<pre class="prettyprint">
-      1 &lt;?xml version="1.0" encoding="utf-8" ?>
-      2 &lt;AMM>
-      3   &lt;CHAPTER KEY="..." CHAPNBR="3">
-      4     &lt;TITLE>...&lt;/TITLE>
-      5     &lt;SECTION KEY="..." CHAPNBR="3" SECNBR="1">...&lt;/SECTION>
+
+```
+      1 <?xml version="1.0" encoding="utf-8" ?>
+      2 <AMM>
+      3   <CHAPTER KEY="..." CHAPNBR="3">
+      4     <TITLE>...</TITLE>
+      5     <SECTION KEY="..." CHAPNBR="3" SECNBR="1">...</SECTION>
       6     ...
-      7   &lt;/CHAPTER>
-      8 &lt;/AMM>
-</pre>
+      7   </CHAPTER>
+      8 </AMM>
+```
+
 Levels also include SUBJECT and PGBLK. The KEY attribute is always unique and each level element has a TITLE child and other structural elements are always direct children of their parent. This is all we need to know about our source.
 
 tree.jsp looks like this:
-<pre class="prettyprint">
-      1 &lt;?xml version="1.0" encoding="utf-8"?>
-      2 &lt;% response.setContentType("text/xml"); %>
-      3 &lt;%@ taglib uri="http://www.xhive.com/taglibs/xhivetags-1.0" prefix="xhtags" %>
-      4 &lt;xhtags:session>
-      5   &lt;xhtags:transaction>
-      6     &lt;xhtags:contextnode contextNodePath="/amm"/>
-      7     &lt;xhtags:xquery>
+
+```
+      1 <?xml version="1.0" encoding="utf-8"?>
+      2 <% response.setContentType("text/xml"); %>
+      3 <%@ taglib uri="http://www.xhive.com/taglibs/xhivetags-1.0" prefix="xhtags" %>
+      4 <xhtags:session>
+      5   <xhtags:transaction>
+      6     <xhtags:contextnode contextNodePath="/amm"/>
+      7     <xhtags:xquery>
       8       declare function local:tree($root as element()) as element()
       9       {
      10         let $rootId := if ($root/@KEY) then $root/@KEY/string() else "0"
      11         return
-     12         &lt;tree id="{ $rootId }">
+     12         <tree id="{ $rootId }">
      13           {
      14             for $child in $root/(CHAPTER | SECTION | SUBJECT | PGBLK)
      15             let $numStr := string-join( ($child/@CHAPNBR,
@@ -98,12 +107,12 @@ tree.jsp looks like this:
      19                                         '-')
      20             let $hasChildren := exists($child/(CHAPTER | SECTION | SUBJECT | PGBLK))
      21             return
-     22               &lt;item id="{ $child/@KEY/string() }" text="{ $numStr , ' ', $child/TITLE/string() }" child="{ if ($hasChildren) then 1 else 0 }"/>
+     22               <item id="{ $child/@KEY/string() }" text="{ $numStr , ' ', $child/TITLE/string() }" child="{ if ($hasChildren) then 1 else 0 }"/>
      23           }
-     24         &lt;/tree>
+     24         </tree>
      25       };
-     26 
-     27       let $root := //*[@KEY = "&lt;jsp:expression>request.getParameter("id")&lt;/jsp:expression>"]
+     26
+     27       let $root := //*[@KEY = "<jsp:expression>request.getParameter("id")</jsp:expression>"]
      28       return
      29         if (empty($root)) then
      30           (: empty root, return main doc :)
@@ -111,13 +120,13 @@ tree.jsp looks like this:
      32         else
      33           (: children of the node with the given ID :)
      34           local:tree($root)
-     35     &lt;/xhtags:xquery>
-     36     &lt;xhtags:foreach>
-     37       &lt;xhtags:tostring/>
-     38     &lt;/xhtags:foreach>
-     39   &lt;/xhtags:transaction>
-     40 &lt;/xhtags:session>
-</pre>
+     35     </xhtags:xquery>
+     36     <xhtags:foreach>
+     37       <xhtags:tostring/>
+     38     </xhtags:foreach>
+     39   </xhtags:transaction>
+     40 </xhtags:session>
+```
 
 The query retrieves the element with the given ID if existant, the root node (/AMM) otherwise. It then calls to the function local:tree to create an XML document that matches the format. local:tree first checks whether we have a KEY attribute on the root (in AMM documents the root node doesn't have an ID) and makes sure we always have something. It then creates the root of the tree in line 12 and for each child of the root node an &lt;item/> with the proper text, ID and child flag. It only iterates over CHAPTER, SECTION, SUBJECT and PGBLK nodes (line 14), everything else is considered non-structural and shouldn't show up in the tree. In line 20 it creates the chapter number that is prepended to the title of each element. This could also be calculated dynamically from the XML, but if you're handling fragments of the document that wouldn't work. The "child" attribute (which should have been named "hasChildren") is just an optimization so that the client doesn't have to ask for the children of each node just to decide whether to display a "+" in front of them.
 

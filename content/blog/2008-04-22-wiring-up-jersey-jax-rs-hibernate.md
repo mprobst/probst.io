@@ -21,7 +21,7 @@ This was fairly simple. If you resources are persistent classes, you'll need a d
 
 The only trouble was that Jersey's default ServletContainer class has it's service() method marked final, so I couldn't override it to open a transaction before the request and close it afterwards. After some playing with AspectJ, I  figured that it's easier to simply create my own HttpServlet that only wraps Jersey's servlet. All methods forward to Jersey's ServletContainer, but the service() method looks like this:
 
-<pre class="prettyprint">
+```
   @Override
   public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
       IOException {
@@ -44,7 +44,7 @@ The only trouble was that Jersey's default ServletContainer class has it's servi
       throw e;
     }
   }
-</pre>
+```
 
 Paul Sandoz of Jersey changed <code>service()</code> to be non-final, so in the future you should be able to simply inherit from ServletContainer for this.
 
@@ -56,13 +56,13 @@ There are two possibilities here. First is to always access persistent classes t
 
 <h3>Persistent sub-resources</h3>
 
-<pre class="prettyprint">
+```
 @Path("books")
 class Books {
   @Path("{id}")
   Book getBook(@PathParam("id") long id) { ... }
 }
-</pre>
+```
 
 Pro: fairly simple. We'll see how to properly inject the Hibernate session into resource classes in the next session.
 
@@ -74,7 +74,7 @@ The second method is to hook into Jersey's way of instantiating resources. Inste
 
 I created a HibernateComponentProvider like this. Persistence is our persistence class from above:
 
-<pre class="prettyprint">
+```
 public class HibernateComponentProvider implements ComponentProvider {
 
   private final Persistence persistence;
@@ -83,11 +83,11 @@ public class HibernateComponentProvider implements ComponentProvider {
     this.persistence = persistence;
   }
 
-  public &lt;T> T getInjectableInstance(T instance) {
+  public <T> T getInjectableInstance(T instance) {
     return instance;
   }
 
-  public &lt;T> T getInstance(Scope scope, Class&lt;T> c) throws InstantiationException,
+  public <T> T getInstance(Scope scope, Class<T> c) throws InstantiationException,
       IllegalAccessException {
     T o = c.newInstance();
     inject(o);
@@ -95,12 +95,12 @@ public class HibernateComponentProvider implements ComponentProvider {
   }
 
   @SuppressWarnings("unchecked")
-  public &lt;T> T getInstance(Scope scope, Constructor&lt;T> constructor, Object[] parameters)
+  public <T> T getInstance(Scope scope, Constructor<T> constructor, Object[] parameters)
       throws InstantiationException, IllegalArgumentException, IllegalAccessException,
       InvocationTargetException {
-    Class&lt;T> clazz = constructor.getDeclaringClass();
+    Class<T> clazz = constructor.getDeclaringClass();
     Entity entity = clazz.getAnnotation(Entity.class);
-    if (entity != null &amp;&amp; parameters.length == 1) {
+    if (entity != null && parameters.length == 1) {
       // assume find by id
       T instance = (T) persistence.getSession().get(clazz, (Serializable) parameters[0]);
       if (instance == null) {
@@ -120,20 +120,21 @@ public class HibernateComponentProvider implements ComponentProvider {
   }
 
 }
-</pre>
+```
 
 This is a bit hackish. If a resource has a visible default constructor, <code>getInstance(Scope, Class)</code> will be called. If we instead have a public constructor that takes a single long parameter, <code>getInstance(Scope, Constructor, parameters)</code> will be called. At that point, we can check if the class is a persistent class (marked by the <code>Entity</code> annotation), and if so, load it from Hibernate instead of instantiating it the normal way.
 
 The trouble is that I don't quite understand how Jersey picks the proper constructor yet, so this might break. Also, it kind of sucks that we have to provide a constructor that is never going to be used, just for Jersey to give us access to the parameters. But maybe this will get better in the future?
 
 Anyways, you can now write your persistent class like this:
-<pre class="prettyprint">
+
+```
 @Path("book/{id}")
 @Entity
 class Book {
   public Book(@PathParam("id") long id) { /* no-op, or whatever */ }
 }
-</pre>
+```
 
 And you'll get the properly loaded persistent instance automagically.
 
@@ -147,14 +148,14 @@ One more thing we have to do is inject our persistent classes after load with th
 
 Hibernate provides hooks into the object life cycle via the <code>org.hibernate.Interceptor</code> interface. I've changed my Persistence class to extend <code>org.hibernate.EmptyInterceptor</code>, and override <code>onLoad()</code> like this:
 
-<pre class="prettyprint">
+```
 @Override
 public boolean onLoad(Object entity, Serializable id, Object[] state, String[] propertyNames,
     Type[] types) {
   provider.inject(entity);
   return super.onLoad(entity, id, state, propertyNames, types);
 }
-</pre>
+```
 
 Provider is a ComponentProvider we obtained from the WebApplication (see next section), and through the <code>inject()</code> call the loaded entity will get it's UriInfo and friends.
 
@@ -164,15 +165,15 @@ Combining this with the above HibernateComponentProvider will mean that in some 
 
 The only thing left is to wire all this stuff together. As I said, we have our own servlet that simple wraps a ServletContainer from Jersey. But we'll have to extend this ServletContainer to override it's configuration methods to supply our own component providers etc. Enter HibernatingServletContainer, a nested class of our custom Servlet:
 
-<pre class="prettyprint">
+```
   private final class HibernatingServletContainer extends ServletContainer {
     @Override
     protected void configure(ServletConfig sc, ResourceConfig rc, final WebApplication wa) {
       super.configure(sc, rc, wa);
 
-      wa.addInjectable(Session.class, new Injectable&lt;Context, Session&gt;() {
+      wa.addInjectable(Session.class, new Injectable<Context, Session>() {
         @Override
-        public Class&lt;Context&gt; getAnnotationClass() {
+        public Class<Context> getAnnotationClass() {
           return Context.class;
         }
 
@@ -182,9 +183,9 @@ The only thing left is to wire all this stuff together. As I said, we have our o
         }
       });
 
-      wa.addInjectable(ComponentProvider.class, new Injectable&lt;Context, ComponentProvider>() {
+      wa.addInjectable(ComponentProvider.class, new Injectable<Context, ComponentProvider>() {
         @Override
-        public Class&lt;Context> getAnnotationClass() {
+        public Class<Context> getAnnotationClass() {
           return Context.class;
         }
 
@@ -203,7 +204,7 @@ The only thing left is to wire all this stuff together. As I said, we have our o
       persistence.setComponentProvider(provider);
     }
   }
-</pre>
+```
 
 This basically creates our persistence instance (which loads the Hibernate configuration and provides transactions), registers our own HibernateComponentProvider with the web application and retrieves the ComponentProvider from Jersey's WebApplication (which wraps our own provider) so we can use it later.
 
@@ -214,21 +215,22 @@ Then initiate is called, which sets up our Persistence layer and our ComponentPr
 <h2>Using it</h2>
 
 Using this code you will have to remember two things: classes that need Hibernate sessions, e.g. for queries or to persist instances, will need to get them injected like this:
-<pre class="prettyprint">
+
+```
 @Path("books")
 class Books {
   @Context Session session;
-}  
-</pre>
+}
+```
 
 And when you need to instantiate sub-resources, for example when a resource is created by a POST request, you'll need to create them through the ComponentProvider. This way, their own @Context annotated fields will be set up properly:
 
-<pre class="prettyprint">
+```
 @Path("books")
 class Books {
   @Context Session session;
   @Context ComponentProvider provider;
-  
+
   @POST
   @ConsumeMime("...")
   public Book createBook(...) {
@@ -238,7 +240,7 @@ class Books {
     return book;
   }
 }
-</pre>
+```
 
 It might be easier to create resources from their representations through a BookProvider or similar, but I'll have to look into that another time.
 

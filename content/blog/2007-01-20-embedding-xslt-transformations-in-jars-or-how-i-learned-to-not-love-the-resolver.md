@@ -27,7 +27,7 @@ The tricky part is getting the Transformer to actually use your EntityResolver -
 
 I ended up with this code:
 
-<pre class="prettyprint">
+```
     /* create the transformer */
     TransformerFactory factory = TransformerFactory.newInstance();
     final Resolver resolver = new Resolver();
@@ -40,7 +40,7 @@ I ended up with this code:
       SAXSource source = new SAXSource(reader, is);
       transf = factory.newTransformer(source);
     } catch (... lots of possible exceptions ...) { ... }
-</pre>
+```
 
 Resolver simply loads Resources from the current ClassLoader using <code>ClassLoader.getResource(filename).openStream()</code> (beware of null returns). When creating an InputSource you'll have to set system ID and public ID to something meaningful on them or you'll get <code> MalformedURIExceptions</code> from the XML parser.
 
@@ -48,7 +48,7 @@ Resolver simply loads Resources from the current ClassLoader using <code>ClassLo
 
 The actual transformation is quite similar, however in this case we do not resolve the input source with our resolver, as it's a real file lying around on the disk, not in our jar. We still have to provide the resolver though because of the DTD files in the jar.
 
-<pre class="prettyprint">
+```
       try {
         XMLReader reader = XMLReaderFactory.createXMLReader();
         reader.setEntityResolver(resolver);
@@ -58,7 +58,7 @@ The actual transformation is quite similar, however in this case we do not resol
         StreamResult target = new StreamResult(targetfile);
         transf.transform(source, target);
       } catch (...) { ... }
-</pre>
+```
 
 Let's remember: all we wanted to say is: 
 <blockquote>Dear Java, here is an XSLT file. Now process this file. Now process that file. And let me do the resource loading.</blockquote>

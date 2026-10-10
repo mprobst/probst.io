@@ -19,9 +19,9 @@ So in a first class wheel reinvention act I wrote my own IMAP copy tool, in ruby
 
 I really like it: it does everything I needed, doesn’t require any configuration, it only copies messages that are not present on the new host, and even prints a nice spinner ;-). Sample usage:
 
-<pre class="prettyprint">
+```
 ruby imapcopy.rb user1@somehost.com user2@gmail.com@gmail.com
 Password for user1@somehost.com:
 Password for user2@gmail.com@gmail.com:
 ...
-</pre>
+```

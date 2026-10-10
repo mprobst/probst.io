@@ -20,7 +20,8 @@ It turns out there's a very straightforward iPhoto export tool that also support
 This leaves you with a directory structure of "$event/$picture" in tmp/iphotoexport for each of your events (unrelated: why is this not a built-in feature of iPhoto?). Now for the uploading part - uploading to Picasa is surprisingly easy using the <a href="http://code.google.com/p/googlecl/">Google command line</a>. It requires the <a href="http://code.google.com/apis/gdata/docs/client-libraries.html">Google client libraries</a>, but both are available in Python's easy_install repository, so simply running <code>sudo easy_install googlecl</code> gives you all you need. Creating an album from a set of pictures is as simple as <code>google picasa create "My Album" my_album/* --date=2012-01-03</code>. We can get the date for the album from the minimum last modified time of all exported files in the album using some ruby trickery, the dates of the pictures themselves are taken from the photo metadata. The command line uses OAuth 2 to log you in, which is a bit spooky - it pops up a browser in which you give the permissions, and then proceeds on the command line. Nice to see OAuth working so well, I really have to find some time and understand that.
 
 So TL;DR:
-<pre>
+
+```
 curl https://raw.github.com/BMorearty/exportiphoto/master/exportiphoto.py > exportiphoto.py
 sudo easy_install googlecl
 
@@ -32,6 +33,6 @@ for album in *; do
   min_last_modified=`ruby -e 'require "time"; puts Dir[ARGV[0] + "/*"].map { |x| File.mtime(x) }.min.strftime("%F")' "$album"`
   google picasa create "$album" $album/* --date=$min_last_modified
 done
-</pre>
+```
 
 As for the incremental, resumable part, I still have no idea. I'll poke around with the Google command line and see if I can get last modified timestamps or something similar out of it.

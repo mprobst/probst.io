@@ -10,12 +10,14 @@ comments: 0
 I recently implemented a (IMHO) much handier way to provide external functions to XQueries in X-Hive/DB.
 
 External functions can be declared in XQuery like this:
-<pre class="prettyprint">
+
+```
 declare function myfunc($a, $b, $c) external;
-</pre>
+```
 
 In X-Hive, you can now create a statement on an arbitrary XML node, register functions, and execute the query (this is from memory and will probably not compile like that):
-<pre class="prettyprint">
+
+```
   XhiveNodeIf node = ...;
   XhiveXQueryQuery statement = node.createXQuery(
     "declare function extract-post($author, $title, $content, $time) external;" +
@@ -33,7 +35,7 @@ In X-Hive, you can now create a statement on an arbitrary XML node, register fun
     }
   });
   statement.execute();
-</pre>
+```
 
 While in general you have to be very careful with functions having side effects, this is a pretty handy way to extract Java objects from a given XML source. As long as you do not make any assumptions about the order, in which the function calls happen, it should also not break.
 

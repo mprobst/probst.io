@@ -10,7 +10,8 @@ comments: 2
 I'm currently digging into the Spring framework a bit and just finished walking through the <a href="http://www.springframework.org/docs/Spring-MVC-step-by-step/index.html">step-by-step tutorial</a>. It creates a simple application that displays a list of products, and then allows you to increase the price of all of them. The price increase is validated and persisted in an HSQL database.
 
 Behold the line counts:
-<pre class="prettyprint">
+
+```
       23 ./.classpath
       23 ./.project
       33 ./bin/test-context.xml
@@ -48,19 +49,21 @@ Behold the line counts:
       34 ./war/WEB-INF/springapp-servlet.xml
       33 ./war/WEB-INF/web.xml
     1337 total
-</pre>
+```
 
 So apart from telling me that either I or Spring are indeed totally 1337, how on earth do they justify this? To be fair, it's about 200 lines less if you don't calculate the DB log and the Eclipse specific files, but still, well over 1000 LOC for that?
 
 What's even worse is the number of concepts you have to understand. Apart from the probably ok Java and SQL stuff - why do we need a build file that says essentially "do as usual", but on >300 lines? And in the particular funny ant style - lots of <code>&lt;property name="src.dir" value="src"/></code>. When did this change the last time? Why do we need a JSP taglib for even the most basic stuff? Separate setup for the application server for each tiny project? Three separate properties files? Lots of copying  jars around?
 
 And then all the XML configuration. >150 LOC not counting the build file. With gems like this:
-<pre class="prettyprint">
-      &lt;property name="driverClassName" value="${jdbc.driverClassName}"/>
-      &lt;property name="url" value="${jdbc.url}"/>
-      &lt;property name="username"  value="${jdbc.username}"/>
-      &lt;property name="password" value="${jdbc.password}"/>
-</pre>
+
+```
+      <property name="driverClassName" value="${jdbc.driverClassName}"/>
+      <property name="url" value="${jdbc.url}"/>
+      <property name="username"  value="${jdbc.username}"/>
+      <property name="password" value="${jdbc.password}"/>
+```
+
 Isn't that the kind of stupid, repetitive task we created computers for?
 
 <h2>Repeated bloat</h2>

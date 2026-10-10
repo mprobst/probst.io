@@ -13,55 +13,55 @@ Writing all those .project and .classpath files is a very tedious task, and clic
 
 I simply imported all the property files into xDB and ran this query:
 
-<pre class="prettyprint">
-import module namespace fw = &#x27;java:java.io.FileWriter&#x27;;
-import module namespace xn = &#x27;java:com.xhive.dom.interfaces.XhiveNodeIf&#x27;;
+```
+import module namespace fw = 'java:java.io.FileWriter';
+import module namespace xn = 'java:com.xhive.dom.interfaces.XhiveNodeIf';
 
 for $project in /project
-let $name := substring-before( substring-after(document-uri($project/root()), &#x27;/build/&#x27;), &#x27;/&#x27;)
-where $name != &#x27;swami&#x27;
+let $name := substring-before( substring-after(document-uri($project/root()), '/build/'), '/')
+where $name != 'swami'
 return
-(:let $name := if ($name = &#x27;daogen&#x27;) then &#x27;DaoGenerator&#x27; else $name:)
-let $dep-internal := tokenize($project/property[@name=&#x27;${module.name}.depend.internal&#x27;]/@value, &#x27;,&#x27;)
-let $dep-common := tokenize($project/property[@name=&#x27;${module.name}.depend.internal&#x27;]/@value, &#x27;,&#x27;)[not(ends-with(., &#x27;.jar&#x27;))]
-let $deps := (&#x27;libs&#x27;, distinct-values(($dep-internal, $dep-common)))
-let $fw := fw:new(concat(&#x27;/Users/martin/tmp/build/&#x27;, $name, &#x27;/.classpath&#x27;))
-let $pw := fw:new(concat(&#x27;/Users/martin/tmp/build/&#x27;, $name, &#x27;/.project&#x27;))
+(:let $name := if ($name = 'daogen') then 'DaoGenerator' else $name:)
+let $dep-internal := tokenize($project/property[@name='${module.name}.depend.internal']/@value, ',')
+let $dep-common := tokenize($project/property[@name='${module.name}.depend.internal']/@value, ',')[not(ends-with(., '.jar'))]
+let $deps := ('libs', distinct-values(($dep-internal, $dep-common)))
+let $fw := fw:new(concat('/Users/martin/tmp/build/', $name, '/.classpath'))
+let $pw := fw:new(concat('/Users/martin/tmp/build/', $name, '/.project'))
 let $classpath :=
-&lt;classpath&gt;
+<classpath>
 { comment { $name } }
-	&lt;classpathentry kind=&quot;src&quot; path=&quot;src&quot;/&gt;
-	&lt;classpathentry kind=&quot;con&quot; path=&quot;org.eclipse.jdt.launching.JRE_CONTAINER&quot;/&gt;
-{ for $dep in $deps return 
-	&lt;classpathentry combineaccessrules=&quot;false&quot; kind=&quot;src&quot; path=&quot;/SW {$dep}&quot;/&gt;
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+{ for $dep in $deps return
+	<classpathentry combineaccessrules="false" kind="src" path="/SW {$dep}"/>
 }
-	&lt;classpathentry kind=&quot;output&quot; path=&quot;bin&quot;/&gt;
-&lt;/classpath&gt;
-let $project := 
-&lt;projectDescription&gt;
-	&lt;name&gt;SW {$name}&lt;/name&gt;
-	&lt;comment&gt;&lt;/comment&gt;
-	&lt;projects&gt;
-	&lt;/projects&gt;
-	&lt;buildSpec&gt;
-		&lt;buildCommand&gt;
-			&lt;name&gt;org.eclipse.jdt.core.javabuilder&lt;/name&gt;
-			&lt;arguments&gt;
-			&lt;/arguments&gt;
-		&lt;/buildCommand&gt;
-	&lt;/buildSpec&gt;
-	&lt;natures&gt;
-		&lt;nature&gt;org.eclipse.jdt.core.javanature&lt;/nature&gt;
-	&lt;/natures&gt;
-&lt;/projectDescription&gt;
+	<classpathentry kind="output" path="bin"/>
+</classpath>
+let $project :=
+<projectDescription>
+	<name>SW {$name}</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+</projectDescription>
 
 return (
-  fw:write($fw, xn:to-xml($classpath)), 
+  fw:write($fw, xn:to-xml($classpath)),
   fw:write($pw, xn:to-xml($project)),
   fw:close($fw),
   fw:close($pw)
 )
-</pre>
+```
 
 What does this do? It iterates through all project descriptions, takes the project name from the document URI, takes out the dependency information (those are the tokenize calls), and create a .project and .classpath XML snippet for each sub-project.
 

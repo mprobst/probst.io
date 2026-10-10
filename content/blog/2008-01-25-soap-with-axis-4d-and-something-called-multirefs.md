@@ -10,23 +10,24 @@ comments: 1
 SOAP really totally sucks. I just wasted several hours trying to access a certain Webservice using Axis. The server is apparently implemented using 4D.
 
 It turns out that by default Axis (at least 1.x) uses a feature called "sendMultiRefs". This turns regular, unsuspecting messages into this:
-<pre class="prettyprint">
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;
-    xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;
-    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
-  &lt;soapenv:Body&gt;
-    &lt;ns1:SomeAction xmlns:ns1=&quot;some-namespace&quot; 
-        soapenv:encodingStyle=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot;&gt;
-      &lt;SID xsi:type=&quot;xsd:string&quot;&gt;some param1&lt;/SID&gt;
-      &lt;startID href=&quot;#id0&quot;/&gt;
-    &lt;/ns1:SomeAction&gt;
-    &lt;multiRef xmlns:soapenc=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; 
-      id=&quot;id0&quot; soapenc:root=&quot;0&quot; soapenv:encodingStyle=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; 
-      xsi:type=&quot;xsd:int&quot;&gt;some param2&lt;/multiRef&gt;
-  &lt;/soapenv:Body&gt;
-&lt;/soapenv:Envelope&gt;
-</pre>
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Body>
+    <ns1:SomeAction xmlns:ns1="some-namespace"
+        soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+      <SID xsi:type="xsd:string">some param1</SID>
+      <startID href="#id0"/>
+    </ns1:SomeAction>
+    <multiRef xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+      id="id0" soapenc:root="0" soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+      xsi:type="xsd:int">some param2</multiRef>
+  </soapenv:Body>
+</soapenv:Envelope>
+```
 
 The fun thing is that this happens somewhere really deep down in the Axis code - if you debug the Axis message send, all you see of the SOAP message is a regular message (without that multiRef abomination), even when you get down really close to the HTTP socket send. I found this in the end using Wireshark/Ethereal to inspect the actual packages.
 

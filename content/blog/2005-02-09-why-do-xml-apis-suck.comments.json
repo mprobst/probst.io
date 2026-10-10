@@ -17,7 +17,7 @@
   "author": "Software Documentation Weblog",
   "url": "http://weblogs.goshaky.com/weblogs/page/lars/20050211#xpath_is_a_nice_dom",
   "kind": "TRACKBACK",
-  "text": "<strong>XPath is a nice DOM wrapper, but what to do about SAX?</strong>\n\nMartin Probst  complaints about overly complex XML-APIs  and recommends the use of XQuery as a language that can be used to work with XML data programatically, that does not suck. \n\n In most cases XQuery is more than people need in their applications. I",
+  "text": "<strong>XPath is a nice DOM wrapper, but what to do about SAX?</strong>\n\nMartin Probst  complaints about overly complex XML-APIs  and recommends the use of XQuery as a language that can be used to work with XML data programatically, that does not suck. \n\nIn most cases XQuery is more than people need in their applications. I",
   "created": "2005-02-11T22:18:38+00:00"
  }
 ]

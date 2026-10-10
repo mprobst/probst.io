@@ -21,11 +21,11 @@ I have the feeling I'm doing something wrong - this should be easier (tm). Maybe
 
 What surprised me along this, this of course also has to work in Windows batch. And everyone knows that Windows batch is probably one of the most horrible programming environments ever "invented". But this particular problem is actually not too difficult. Once someone on StackOverflow.com enlightened me over the <a href="http://stackoverflow.com/questions/232747/read-environment-variables-from-file-in-windows-batch-cmdexe">byzantine details of the Windows batch FOR loop</a>, it's a relatively simple loop containing an IF DEFINED %%i:
 
-<pre class="prettyprint">
+```
   FOR /F "eol=# tokens=1,2* delims==" %%i in ('type "!XHIVERC!') do (
     REM only set variables if not already defined as environment variables (they take precedence)
     IF NOT DEFINED %%i (
       SET %%i=%%~j
     )
   )
-</pre>
+```

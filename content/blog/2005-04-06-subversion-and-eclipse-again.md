@@ -17,9 +17,9 @@ Subclipse itself is intended to work with the JNI javahl bindings, which it coul
 
 Long story, short fix:
 
-<pre class="prettyprint">
+```
 martin@perseus ~ $ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib
 martin@perseus ~ $ eclipse-3.1
-</pre>
+```
 
 And everything (?) works again. On Gentoo you can set this environment variable permanently by editing e.g. <code>/etc/env.d/00basic</code>, add the line "<code>LD\\_LIBRARY\\_PATH=$LD\\_LIBRARY\\_PATH:/usr/lib</code>" and do an <code>/sbin/env-update && source /etc/profile</code> (as root). On the next login you should have your environment set up.

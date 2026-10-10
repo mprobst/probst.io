@@ -13,8 +13,9 @@ Something not mentioned in those tips is that not only the input managers themse
 
 These two commands did the trick for me:
 
-<pre class="prettyprint">$ sudo chown -R root:wheel /Library/InputManagers
+```
+$ sudo chown -R root:wheel /Library/InputManagers
 $ sudo chmod -R go-w /Library/InputManagers
-</pre>
+```
 
 By the way, does anyone know what the '@'-sign after the rights in a directory listing means? As in <code>drwxr-xr-x@ 11 root  wheel   374B 11 Sep 04:25 SafariBlock</code>?

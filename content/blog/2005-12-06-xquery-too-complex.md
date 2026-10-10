@@ -19,15 +19,16 @@ What you have to know about XQuery are three things:
 </ul>
 
 What you don't need to know (but may find interesting) is: there is a lot more to XQuery (functions, typing, ...), but it wont get into your way if you don't explicitly ask for it. The whole syntax a newbie who knows XPath and XML, e.g. the typical XSLT 1.0 user, has to understand is this:
-<pre class="prettyprint">
+
+```
   let $foo := "bar"
   for $x in doc('a.xml')/my/xpath[@attr = $foo]
   for $y := doc('b.xml')/more/xpath
   where $x/@id = $y/@id
   order by $x/name
   return
-    &lt;newtag>{ $x/name, $y/address }&lt;/newtag>
-</pre>
+    <newtag>{ $x/name, $y/address }</newtag>
+```
 
 There's a lot more out there, but this is everything you really have to know. <code>for</code> loops and <code>let</code> statements to aggregate XML, <code>where</code> for easy-to-use joins, XPath to actually get the data, XML literals to group it together. If that's too complex for you, I don't know. Anyone who was able to twist his mind around XSLT should be able to use that. Plus, in the areas where XSLT 1.0 fails horribly (strings, grouping, ...) XQuery provides the functionality without forcing you to write 20 lines of stylesheet code for "replace($haystack, $needle, $replacement)". This is just a subset of what XQuery has to offer, but it's the most important part, and it's the part that gives the user direct, large benefits over other XML technologies (XSLT, XPath) in querying XML. 
 

@@ -11,9 +11,9 @@ comments: 0
 
 Gems couldn't find any already installed gem anymore. The fix was easy, though a bit time consuming: re-install all gems you have.
 
-<pre class='prettyprint'>
+```
 $ export installed_gems="`ls /Library/Ruby/Gems/gems/ | sed s/-[^-]*$//g | sort -u`"
 $ gem install $installed_gems
-</pre>
+```
 
 (with /Library/Ruby/Gems/gems/ being the path to your gems)

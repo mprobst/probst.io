@@ -9,11 +9,19 @@ comments: 0
 
 <p>David Megginson posted a <a href='http://www.megginson.com/blogs/quoderat/2007/01/28/thinking-about-structure/'>follow up</a> on his <a href='http://www.megginson.com/blogs/quoderat/2007/01/03/all-markup-ends-up-looking-like-xml/'>earlier take on JSON</a>, which contains an excellent example/explanation on the advantages of markup compared to hard wired data structures.</p>
 <p>He starts of with a simple names example and ends up with the following JSON structure, in a futile attempt to design the be-all-end-all of names data structures:</p>
-<pre class="prettify">&gt;    {&quot;type&quot;: &quot;name&quot;, &quot;gender&quot;: &quot;male&quot;, &quot;prefix&quot;: &quot;Don&quot;,
-&gt;      &quot;given-name&quot;: &quot;Alonso&quot;, &quot;surname&quot;: &quot;Quixote&quot;,
-&gt;      &quot;surname-after-given-names&quot;: true, &quot;postfix&quot;: &quot;de la Mancha&quot;}</pre>
+
+```
+>    {"type": "name", "gender": "male", "prefix": "Don",
+>      "given-name": "Alonso", "surname": "Quixote",
+>      "surname-after-given-names": true, "postfix": "de la Mancha"}
+```
+
 <p>Where the minimal needed markup would still be:</p>
-<pre class="prettify">&gt;    &lt;name gender=&quot;male&quot;&gt;Don Alonso &lt;surname&gt;Quixote&lt;/surname&gt; de la Mancha&lt;/name&gt;</pre>
+
+```
+>    <name gender="male">Don Alonso <surname>Quixote</surname> de la Mancha</name>
+```
+
 <p>Granted: the JSON code contains a lot more semantic information about it&apos;s content, and that&apos;s why it&apos;s so much more complicated. But that is exactly the point: with XML (or markup in general) you can leave your data structures underspecified like Don Quixote&apos;s name, still have meaningful semantic annotations in parts of them, and then later go on and add other information to the data. Properly written clients (i.e. that don&apos;t depend on the exact number of XML elements below name) will continue to work without noticing.</p>
 <p>Data structures such as the JSON code above require you to actually specify all this stuff upfront, and adding to them later will break any existing clients.</p>
 <p>Great post, go read it.</p>

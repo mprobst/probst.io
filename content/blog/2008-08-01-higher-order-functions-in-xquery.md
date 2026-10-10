@@ -12,14 +12,15 @@ The requirements for XQuery 1.1 contain a <a href="http://www.w3.org/TR/xquery-1
 <h2>Simple predicates</h2>
 
 A simple use case is to pass a predicate to another function, as shown below:
-<pre>
-(:: Selectively only copy those elements for which $pred returns true 
+
+```
+(:: Selectively only copy those elements for which $pred returns true
     TODO works recursively, but copys all attributes regardless of $pred
   :)
-declare function local:selective-copy($nodes as element()*, $pred as function($node as element()) -&gt; xs:boolean)
+declare function local:selective-copy($nodes as element()*, $pred as function($node as element()) -> xs:boolean)
 {
 	for $n in $nodes
-	return 
+	return
 	  (: call $pred :)
 	  if ($pred($n)) then element { node-name($n) } { $n/@*, local:selective-copy($n/*, $pred) }
 	  else ()
@@ -28,25 +29,25 @@ declare function local:selective-copy($nodes as element()*, $pred as function($n
 declare function local:mypred($node as element()) as xs:boolean
 {
   let $name = node-name($node)
-  return namespace-uri-from-QName($name) = (&#x27;http://www.example.com/example&#x27;, &#x27;http://www.foo.com/bar&#x27;)
+  return namespace-uri-from-QName($name) = ('http://www.example.com/example', 'http://www.foo.com/bar')
 };
 
 let $xml :=
-  &lt;user xmlns=&quot;http://www.example.com/example&quot;&gt;
-    &lt;name&gt;&lt;first&gt;Fritz&lt;/first&gt; &lt;last&gt;M&uuml;ller&lt;/last&gt;&lt;/name&gt;
-    &lt;password xmlns=&quot;http://www.example.com/secure&quot;&gt;vj/b5ZaUYQ6kU&lt;/password&gt;
-    &lt;preferences&gt; ... &lt;/preferences&gt;
-  &lt;/user&gt;
-(: user the curry operator &amp; to get a function &quot;handle&quot; :)
-let $predicate := &amp;local:mypred
+  <user xmlns="http://www.example.com/example">
+    <name><first>Fritz</first> <last>Müller</last></name>
+    <password xmlns="http://www.example.com/secure">vj/b5ZaUYQ6kU</password>
+    <preferences> ... </preferences>
+  </user>
+(: user the curry operator & to get a function "handle" :)
+let $predicate := &local:mypred
 return local:selective-copy($xml, $predicate)
-</pre>
+```
 
 <h2>Currying</h2>
 
 The next use case would be the natural extension - real currying of functions. local:selective-copy is as above, but we'll generalize our predicate a bit:
 
-<pre>
+```
 (: this function compares the namespace of a given node against a set of legal namespaces :)
 declare function local:namespace-matches($namespaces as xs:anyURI*, $node as element()) as xs:boolean
 {
@@ -55,16 +56,16 @@ declare function local:namespace-matches($namespaces as xs:anyURI*, $node as ele
 };
 
 let $xml :=
-  &lt;user xmlns=&quot;http://www.example.com/example&quot;&gt;
-    &lt;name&gt;&lt;first&gt;Fritz&lt;/first&gt; &lt;last&gt;M&uuml;ller&lt;/last&gt;&lt;/name&gt;
-    &lt;password xmlns=&quot;http://www.example.com/secure&quot;&gt;vj/b5ZaUYQ6kU&lt;/password&gt;
-    &lt;preferences&gt; ... &lt;/preferences&gt;
-  &lt;/user&gt;
-(: user the curry operator &amp; to get a function &quot;handle&quot;
+  <user xmlns="http://www.example.com/example">
+    <name><first>Fritz</first> <last>Müller</last></name>
+    <password xmlns="http://www.example.com/secure">vj/b5ZaUYQ6kU</password>
+    <preferences> ... </preferences>
+  </user>
+(: user the curry operator & to get a function "handle"
    we pass in a namespace to check against, and get an unary function in return :)
-let $predicate := &amp;local:mypred(&quot;http://www.example.com/example&quot;)
+let $predicate := &local:mypred("http://www.example.com/example")
 return local:selective-copy($xml, $predicate)
-</pre>
+```
 
 <h2>The &amp; operator</h2>
 

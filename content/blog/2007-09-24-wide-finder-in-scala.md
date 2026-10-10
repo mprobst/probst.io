@@ -14,7 +14,9 @@ comments: 4
 So while it's probably most sensible to do this with some map/reduce library, I tried implementing it using Scala actors. I'm not a Scala programmer, and have no clue about the Actors library, so this code is probably totally wrong, inefficient etc. But at least I can learn something this way :-)
 
 First the original Ruby script:
-<pre class="prettyprint">counts = {}
+
+```
+counts = {}
 counts.default = 0
 
 ARGF.each_line do |line|
@@ -27,30 +29,33 @@ keys_by_count = counts.keys.sort { |a, b| counts[b] <=> counts[a] }
 keys_by_count[0 .. 9].each do |key|
   puts "#{counts[key]}: #{key}"
 end
-</pre>
+```
 
 Converted to Scala, that gives for the serial case:
-<pre class="prettyprint">object SerialAnalyzer extends Application {
+
+```
+object SerialAnalyzer extends Application {
   val pattern = Pattern.compile("GET /root/(\\\\d\\\\d\\\\d\\\\d/\\\\d\\\\d/\\\\d\\\\d/[^ .]+)")
   val reader = new BufferedReader(new FileReader("/Users/martin/tmp/log"))
 
   val counts = new HashMap[String, Int]
   var line = reader.readLine
-  while (line != null) { 
+  while (line != null) {
     val matcher = LogMatcher.pattern.matcher(line)
     if (matcher.find()) {
       val uri = matcher.group(1)
-      val count = counts.getOrElse(uri, 0) 
+      val count = counts.getOrElse(uri, 0)
       counts(uri) = count + 1
     }
     line = reader.readLine
   }
 }
-</pre>
+```
 
 This takes about 1.5 seconds to go through 250 M of log files on a dual core MacBook Pro 2GHz.
 
-<pre class="prettyprint">object Analyzer {
+```
+object Analyzer {
   def main(args: Array[String]): Unit = {
     val numAnalyzers = if (args.length > 0) Integer.parseInt(args(0)) else 4
     val logreader = new LogReader(numAnalyzers)
@@ -61,10 +66,10 @@ This takes about 1.5 seconds to go through 250 M of log files on a dual core Mac
 class LogReader(numAnalyzers: int) extends Actor {
   val reader = new BufferedReader(new FileReader("/Users/martin/tmp/log"))
   def hundredLines = (for (val i <- 0 to 10000) yield reader.readLine).toList
-  
+
   val analyzers = (for (val i <- 1 to numAnalyzers) yield new LogMatcher).toList
   analyzers.foreach(_.start)
-  
+
   def act = {
     while (reader.ready) analyzers.foreach(_ ! hundredLines)
     analyzers.foreach(_ ! Stop)
@@ -86,27 +91,27 @@ object LogMatcher {
 }
 class LogMatcher extends Actor {
   val counts = new HashMap[String, Int]
-  
+
   def act = {
     loop {
       react {
         case lines: List[String] =>
-          for (line <- lines if line != null) { 
+          for (line <- lines if line != null) {
             val matcher = LogMatcher.pattern.matcher(line)
             if (matcher.find()) {
               val uri = matcher.group(1)
-              val count = counts.getOrElse(uri, 0) 
+              val count = counts.getOrElse(uri, 0)
               counts(uri) = count + 1
             }
           }
-        case Stop => 
+        case Stop =>
           sender ! counts
           exit()
       }
     }
   }
 }
-</pre>
+```
 
 The code does work, but sadly the Actors version is not faster than the single threaded version on my dual core MacBook Pro. No idea why... also the program exhibits some sort of a memory leak - it seems to keep the whole file in memory, thus giving OutOfMemoryErrors if you don't run it with a Java heap big enough for the whole log file. Again, no idea why, I don't seem to keep any nasty pointers to anyone.
 

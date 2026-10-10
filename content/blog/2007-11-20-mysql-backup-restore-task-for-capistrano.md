@@ -15,10 +15,11 @@ While the script doesn't require you to type the database user's password, it wi
 
 So the following will have to do for now, but I'm quite pleased with it. I should probably include a warning/confirmation before restoring, but hey, command lines are for experts ;-)
 
-<pre class="prettyprint">$config = YAML.load_file(File.join('config', 'database.yml'))
+```
+$config = YAML.load_file(File.join('config', 'database.yml'))
 
 desc "Backup the database to db/" + Time.now.strftime("backup_#{$config['production']['database']}_%Y-%m-%e.sql")
-task :backup, :roles => :db, :only => { :primary => true } do 
+task :backup, :roles => :db, :only => { :primary => true } do
   backup_path = File.join('db', Time.now.strftime("backup_#{$config['production']['database']}_%Y-%m-%e.sql"))
   on_rollback { delete backup_path, :recursive => false }
   backup_file = File.new(backup_path, 'w+')
@@ -54,4 +55,4 @@ task :restore, :roles => :db do
   end
   logger.info "Restored successfully."
 end
-</pre>
+```

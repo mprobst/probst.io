@@ -15,7 +15,7 @@ Basically you edit your checked-in bundle using Pages/Keynote/..., then run '<co
 
 I modified it a bit to better handle folder switches by using pushd/popd, so I'm reproducing it here:
 
-<pre class="prettyprint">
+```
 #!/bin/bash
 IFS="
 "
@@ -81,4 +81,4 @@ rm -Rf "$base"
 mv "$prefix.$base" "$base"
 popd >/dev/null
 echo "* done."
-</pre>
+```

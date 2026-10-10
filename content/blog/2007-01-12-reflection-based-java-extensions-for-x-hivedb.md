@@ -8,22 +8,29 @@ comments: 1
 ---
 
 I've just finished a nice feature for X-Hive/DB 8.0, Java extensions based on reflection. The idea is to use reflection to introspect in a Java class and provide the functionality there to an XQuery statement. This is (intentionally) quite similar to functionality in other XQuery or XSLT implementations. Example:
-<pre class="prettyprint">
+
+```
 import namespace math = 'java:java.lang.Math';
 $math:PI, $math:sqrt(4)
-</pre>
+```
 
 <h3>Type marshalling</h3>
 
 Most of the work went into type marshalling from XQuery to Java and back. The code inspects Java method and constructor parameters and then creates appropriate parameters for it from whatever is passed in XQuery, casting types as necessary (using XQuery type promotion). The code also maps Java collections as necessary, using Java 5 generics to find the actual type. So this basically means you can write:
-<pre class="prettyprint">String getFoo(Iterator<org.w3c.dom.Element> it, String[] s, int x);</pre>
+
+```
+String getFoo(Iterator<org.w3c.dom.Element> it, String[] s, int x);
+```
+
 And in XQuery:
-<pre class="prettyprint">
+
+```
 import module namespace x = 'java:package.MyClass';
 let $nodes := //foo
 let $s := ("hello", "world")
 return x:get-foo($x, $nodes, $s, 5)
-</pre>
+```
+
 ... and X-Hive/DB will automatically create the required arrays/iterators etc. Same goes for return values. It currently understands anything that is Iterable, Iterator, Lists and Collections, Arrays, and Sets. You might have noticed the extra $x parameter - this is an instance of MyClass as non-static methods naturally need an instance of the declaring class. Such instances can be constructed using constructors via x:new(...) or passed in via external variables. Also note that the Java-ish "getFoo" is translated to a more XQueryish "get-foo" :-)
 
 I think this is really handy. It should also not be that expensive as all reflection stuff is done at compile time, so in large queries this should not make a difference. Additionally you can of course always create your XQuery once and re-use it. 

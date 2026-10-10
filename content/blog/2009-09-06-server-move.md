@@ -11,13 +11,13 @@ As you might know, I used to run this weblog on a virtual server hosted by <a hr
 
 The trick is that I got a DynDNS domain and point my real domain (martin-probst.com) to that one through a CNAME record, and the media server / TV in my living room happily serves the files.
 
-<pre>
+```
 $ dig www.martin-probst.com
 [... snip ...]
 ;; ANSWER SECTION:
 www.martin-probst.com.	81215	IN	CNAME	martinpr.homeip.net.
 martinpr.homeip.net.	60	IN	A	92.225.50.126
-</pre>
+```
 
 The server is a new Mac mini, so it will certainly not have the dreaded out of memory problems. I think I'm even saving money - Apple claims an idle energy consumption of about 14 Watt, which should be slightly cheaper than my server hosting in total. Of course this calculation doesn't include the hardware, but I wanted that media server anyway ;-)
 

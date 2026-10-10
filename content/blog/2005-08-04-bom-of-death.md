@@ -9,7 +9,9 @@ comments: 0
 
 Note to self: next time you get really strange XML parse and comparison errors, try running this before looking at XML and Java files, cursing at XSLT, JUnit, Eclipse & the world in general for an hour:
 
-<pre class="prettyprint">find | grep -v .svn | xargs sed "s|\\xEF\\xBB\\xBF||" -i.from-bom</pre>
+```
+find | grep -v .svn | xargs sed "s|\\xEF\\xBB\\xBF||" -i.from-bom
+```
 
 (Unix shell script to remove UTF-8 byte order marks from all files below the current directory).
 

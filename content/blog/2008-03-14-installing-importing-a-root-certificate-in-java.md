@@ -15,11 +15,11 @@ Basically you download their certificate, in this case <a href="http://www.a-cer
 
 Oh and of course in between you perform extensive measures to make sure the certificate is valid, such as, well, ... you can compare the fingerprint to the one on the webpage where you downloaded it, tremendously secure ;-)
 
-<pre class="prettyprint">
+```
 # convert:
 openssl x509 -in a-cert-globaltrust.crt -out a-cert-globaltrust.pem -outform PEM
 # install, type "changeit" for the password
 keytool -import -file a-cert-globaltrust.pem -keystore /etc/java-1.5.0-sun/security/cacerts
-</pre>
+```
 
 You might also want to install it for openssl clients, as documented <a href="http://improbable.org/chris/index.php?ID=118">here</a>.
