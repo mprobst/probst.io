@@ -7,7 +7,7 @@ draft: false
 comments: 0
 ---
 
-As you might know, I used to run this weblog on a virtual server hosted by <a href="http://www.hosteurope.de">Hosteurope</a>, the smallest possible configuration. However a small virtual server <a href="/blog/2008-09-19-memory-accounting-in-linux">doesn't seem to be enough for even the smallest weblog possible</a> (at least when it's written in Rails...), so I moved this weblog to my own server today.
+As you might know, I used to run this weblog on a virtual server hosted by <a href="http://www.hosteurope.de">Hosteurope</a>, the smallest possible configuration. However a small virtual server <a href="/blog/2008/09/19/memory-accounting-in-linux/">doesn't seem to be enough for even the smallest weblog possible</a> (at least when it's written in Rails...), so I moved this weblog to my own server today.
 
 The trick is that I got a DynDNS domain and point my real domain (martin-probst.com) to that one through a CNAME record, and the media server / TV in my living room happily serves the files.
 

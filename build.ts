@@ -8,7 +8,7 @@ const BLOG_DIR = 'content/blog';
 
 type Comment = { author: string; url: string; kind: string; text: string; created: string };
 type Post = {
-  title: string; date: string; updated: string; url: string; source?: string;
+  title: string; date: string; updated: string; url: string;
   slug: string; body: string; comments: Comment[];
 };
 
@@ -72,17 +72,11 @@ function loadPosts() {
     }
     posts.push({
       title: JSON.parse(fields.title), date: fields.date, updated: fields.updated, url: fields.url,
-      source: fields.source, slug: name.replace(/\.md$/, ''), comments,
-      body: name === '2009-09-06-server-move.md' ? fixServerMoveLink(body) : body,
+      slug: name.replace(/\.md$/, ''), comments,
+      body,
     });
   }
   return posts.sort((a, b) => b.date.localeCompare(a.date));
-}
-
-function fixServerMoveLink(body: string) {
-  const target = readFileSync(join(BLOG_DIR, '2008-09-19-memory-accounting-in-linux.md'), 'utf8')
-    .match(/^url: (\S+)/m)![1];
-  return body.replace('/blog/2008-09-19-memory-accounting-in-linux', target);
 }
 
 function page(title: string, content: string, canonicalPath: string) {
@@ -130,12 +124,15 @@ function renderComments(post: Post) {
   const links = post.comments.filter((c) => c.kind !== 'COMMENT');
   const authorLink = (c: Comment) =>
     c.url ? `<a href="${escapeHtml(c.url)}" rel="nofollow ugc">${escapeHtml(c.author)}</a>` : escapeHtml(c.author);
-  let html = '<section class="comments">\n<h2>Archived comments</h2>\n';
+  let html = '<section class="comments">\n';
+  if (comments.length > 0) {
+    html += '<h2>Archived comments</h2>\n';
+  }
   for (const c of comments) {
     html += `<article class="comment">\n<p class="byline">${authorLink(c)}, ${dayOf(c.created)}</p>\n${render(c.text)}</article>\n`;
   }
   if (links.length > 0) {
-    html += '<h3>Linked from</h3>\n<ul class="linked-from">\n';
+    html += '<h2>Linked from</h2>\n<ul class="linked-from">\n';
     for (const c of links) {
       html += `<li>${authorLink(c)} (${dayOf(c.created)})</li>\n`;
     }
@@ -145,13 +142,10 @@ function renderComments(post: Post) {
 }
 
 function renderPost(post: Post) {
-  const source = post.source
-    ? ` &middot; <a href="${escapeHtml(post.source)}">Originally a Hacker News comment</a>`
-    : '';
   const comments = post.comments.length > 0 ? renderComments(post) : '';
   const content = `<article>
 <h1>${escapeHtml(post.title)}</h1>
-<p class="byline"><time datetime="${escapeHtml(post.date)}">${dayOf(post.date)}</time>${source}</p>
+<p class="byline"><time datetime="${escapeHtml(post.date)}">${dayOf(post.date)}</time></p>
 ${marked.parse(post.body, { async: false })}
 </article>
 ${comments}`;
