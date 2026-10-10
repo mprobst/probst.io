@@ -20,7 +20,7 @@ counts = {}
 counts.default = 0
 
 ARGF.each_line do |line|
-  if line =~ %r{GET /ongoing/When/\\d\\d\\dx/(\\d\\d\\d\\d/\\d\\d/\\d\\d/[^ .]+) }
+  if line =~ %r{GET /ongoing/When/\d\d\dx/(\d\d\d\d/\d\d/\d\d/[^ .]+) }
     counts[$1] += 1
   end
 end
@@ -35,7 +35,7 @@ Converted to Scala, that gives for the serial case:
 
 ```
 object SerialAnalyzer extends Application {
-  val pattern = Pattern.compile("GET /root/(\\\\d\\\\d\\\\d\\\\d/\\\\d\\\\d/\\\\d\\\\d/[^ .]+)")
+  val pattern = Pattern.compile("GET /root/(\\d\\d\\d\\d/\\d\\d/\\d\\d/[^ .]+)")
   val reader = new BufferedReader(new FileReader("/Users/martin/tmp/log"))
 
   val counts = new HashMap[String, Int]
@@ -75,19 +75,19 @@ class LogReader(numAnalyzers: int) extends Actor {
     analyzers.foreach(_ ! Stop)
     for (analyzer <- analyzers) {
       receive {
-        case result: HashMap[String, Int] => print("Done.\\n")
+        case result: HashMap[String, Int] => print("Done.\n")
       }
     }
     val resultMap = new HashMap[String,Int]
     for (map <- analyzers.map(_.counts); (uri, count) <- map) {
       resultMap(uri) = resultMap.getOrElse(uri, 0) + count
     }
-    for (entry <- resultMap) print(entry._1 + ": " + entry._2 + "\\n")
+    for (entry <- resultMap) print(entry._1 + ": " + entry._2 + "\n")
   }
 }
 
 object LogMatcher {
-  val pattern = Pattern.compile("GET /root/(\\\\d\\\\d\\\\d\\\\d/\\\\d\\\\d/\\\\d\\\\d/[^ .]+)")
+  val pattern = Pattern.compile("GET /root/(\\d\\d\\d\\d/\\d\\d/\\d\\d/[^ .]+)")
 }
 class LogMatcher extends Actor {
   val counts = new HashMap[String, Int]

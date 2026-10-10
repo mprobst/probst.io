@@ -32,7 +32,7 @@ task :backup, :roles => :db, :only => { :primary => true } do
     else
       if data =~ /^Enter password:/
         channel.send_data($config['production']['password'])
-        channel.send_data("\\n")
+        channel.send_data("\n")
       else
         raise Capistrano::Error, "unexpected output from mysqldump: " + data
       end

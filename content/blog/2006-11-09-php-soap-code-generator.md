@@ -20,38 +20,38 @@ if (isset($argv[1])) {
 } else if (isset($_GET["wsdl"])) {
   $wsdl = $_GET["wsdl"];
 } else {
-  echo '<form method="GET" action="' . $_SERVER["PHP_SELF"] . '">' . "\\n";
+  echo '<form method="GET" action="' . $_SERVER["PHP_SELF"] . '">' . "\n";
   echo 'Specify a WSDL to dump: <input name="wsdl" type="text"/></form>';
   exit(0);
 }
 
 // replace word character groups delimited by non-words with a hrefs to #word
 function hrefify($str) {
-  return preg_replace('/(\\\\W)?(\\\\w+)(\\\\W)?/', '\\\\1<a href=\\'#\\\\2\\'>$2</a>\\\\3', $str);
+  return preg_replace('/(\\W)?(\\w+)(\\W)?/', '\\1<a href=\'#\\2\'>$2</a>\\3', $str);
 }
 
 $options = $SAP_AUTH;
 try {
   $soap = new SoapClient($wsdl, $options);
   echo "<h1>$wsdl</h1>";
-  echo "<h2>Types:</h2>\\n";
-  echo "<pre class="prettyprint">\\n";
+  echo "<h2>Types:</h2>\n";
+  echo "<pre>\n";
   foreach($soap->__getTypes() as $name => $type) {
-    preg_match('/\\w+ (\\w+)/', $type, $matches);
+    preg_match('/\w+ (\w+)/', $type, $matches);
     $name = $matches[1];
-    echo "<h4><a id='$name'>$name</a></h4>\\n";
+    echo "<h4><a id='$name'>$name</a></h4>\n";
     echo hrefify($type);
   }
-  echo "</pre>\\n";
-  echo "<h2>Functions:</h2>\\n";
-  echo "<pre class="prettyprint">\\n";
+  echo "</pre>\n";
+  echo "<h2>Functions:</h2>\n";
+  echo "<pre>\n";
   foreach($soap->__getFunctions() as $name => $func) {
-    preg_match('/\\w+ (\\w+)/', $type, $matches);
+    preg_match('/\w+ (\w+)/', $type, $matches);
     $name = $matches[1];
-    echo "<h4><a id='$name'>$name</a></h4>\\n";
+    echo "<h4><a id='$name'>$name</a></h4>\n";
     echo hrefify($func);
   }
-  echo "</pre>\\n";
+  echo "</pre>\n";
 } catch (SoapFault $f) {
   echo $f;
 }
@@ -75,7 +75,7 @@ if (isset($argv[1]) && $argv[1] != "") {
 } else if (isset($_GET["wsdl"]) && $_GET["wsdl"] != "") {
   $wsdl = $_GET["wsdl"];
 } else {
-  echo '<form method="GET" action="' . $_SERVER["PHP_SELF"] . '">' . "\\n";
+  echo '<form method="GET" action="' . $_SERVER["PHP_SELF"] . '">' . "\n";
   echo 'Specify a WSDL to transform to PHP: <input name="wsdl" type="text"/></form>';
   exit(0);
 }
@@ -84,43 +84,43 @@ $options = $SAP_AUTH;
 $actual_types;
 try {
   $soap = new SoapClient($wsdl, $options);
-  echo "<pre class="prettyprint">\\n";
-  echo "&lt;?php\\n";
-  echo "// This file was generated from $wsdl using create_types.php\\n\\n";
+  echo "<pre>\n";
+  echo "&lt;?php\n";
+  echo "// This file was generated from $wsdl using create_types.php\n\n";
   $types = $soap->__getTypes();
   foreach($types as $type) {
     if (preg_match("/^struct.*/",$type)) {
       // this is a complex type
-      preg_match('/struct (\\w+)/', $type, $matches);
+      preg_match('/struct (\w+)/', $type, $matches);
       $name = $matches[1];
       $actual_types[$name] = $name;
-      echo "class $name {\\n";
-      $lines = array_slice(explode("\\n", $type), 1, -1);
+      echo "class $name {\n";
+      $lines = array_slice(explode("\n", $type), 1, -1);
       foreach ($lines as $line) {
-        $line = preg_match('/ (\\w+) (\\w+);/', $line, $matches);
-        $subtype = array_values(preg_grep("/^\\w+ $matches[1]/", $types));
+        $line = preg_match('/ (\w+) (\w+);/', $line, $matches);
+        $subtype = array_values(preg_grep("/^\w+ $matches[1]/", $types));
         if (isset($subtype[0]) && !preg_match("/^struct.*/",$subtype[0])) {
           // primitive type
-          echo "  // " . $subtype[0] . "\\n";
+          echo "  // " . $subtype[0] . "\n";
         } else {
-          echo "  // " . $matches[1] . "\\n";
+          echo "  // " . $matches[1] . "\n";
         }
-        echo "  public \\$$matches[2];\\n";
+        echo "  public \$$matches[2];\n";
       }
-      echo "}\\n\\n";
+      echo "}\n\n";
     }
   }
-  echo "\\$classmap = array(\\n";
+  echo "\$classmap = array(\n";
   while (list($name, $class) = each($actual_types)) {
-    echo "  \\"$name\\" => \\"$class\\"";
+    echo "  \"$name\" => \"$class\"";
     if (current($actual_types)) {
       echo ",";
     }
-    echo "\\n";
+    echo "\n";
   }
-  echo ");\\n";
+  echo ");\n";
   echo "?>";
-  echo "</pre>\\n";
+  echo "</pre>\n";
 } catch (SoapFault $f) {
   echo $f;
 }
