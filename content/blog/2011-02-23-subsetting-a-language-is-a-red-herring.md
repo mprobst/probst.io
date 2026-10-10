@@ -8,7 +8,11 @@ comments: 0
 source: https://news.ycombinator.com/item?id=2254298
 ---
 
-*Originally posted as a [comment on Hacker News](https://news.ycombinator.com/item?id=2254298) on [Switching to Plan J](http://alarmingdevelopment.org/?p=562), a post about moving from Scala back to Java. Another commenter suggested that a team can simply use Scala as a "better Java" and stay away from its advanced features. Earlier in the thread, the discussion had turned to a language's "complexity budget": languages have only so much room for concepts before their interactions become unpredictable and too much to keep in mind at once.*
+*Originally posted as a [comment on Hacker News](https://news.ycombinator.com/item?id=2254298) on [Switching to Plan J](http://alarmingdevelopment.org/?p=562), a post about moving from Scala back to Java. Earlier in the thread, the discussion had turned to a language's "complexity budget": languages have only so much room for concepts before their interactions become unpredictable and too much to keep in mind at once. The comment replied to another commenter, who wrote:*
+
+> Scala can be used strictly as a "better Java" without using any of the advanced type features or idioms if that is what you want. […]
+>
+> I offer the hypothesis that when using any new and "large" language on a real life project you have to work with a subset. This is not a bad thing and "subset" is not a dirty word […]
 
 I think the "subsetting the language" approach is a red herring. Yes, you can decide you'll only use features X, Y, and Z. Many people do that in similarly complex languages like C++.
 

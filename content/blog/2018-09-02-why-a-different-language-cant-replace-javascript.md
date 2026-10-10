@@ -8,7 +8,9 @@ comments: 0
 source: https://news.ycombinator.com/item?id=17896925
 ---
 
-*Originally posted as a [comment on Hacker News](https://news.ycombinator.com/item?id=17896925) on Evan Martin's post [TypeScript at Google](http://neugierig.org/software/blog/2018/09/typescript-at-google.html). The post considers the tempting option of abandoning JavaScript altogether for something like GWT, Dart, WASM, Clojure, Haxe or Elm, and explains why that doesn't work. At the time, Evan and I were working on TypeScript at Google together, and this describes the thinking behind our approach.*
+*Originally posted as a [comment on Hacker News](https://news.ycombinator.com/item?id=17896925) on Evan Martin's post [TypeScript at Google](http://neugierig.org/software/blog/2018/09/typescript-at-google.html). At the time, Evan and I were working on TypeScript at Google together, and this describes the thinking behind our approach. The comment replied to this passage from the post:*
+
+> The first tempting option is to just abandon this ruined planet and settle a new one that doesn't even involve JavaScript. If only we invested more in GWT (a Google project that compiles Java to JavaScript) or Dart (a Google project that compiles a new language to JavaScript) or WASM or [insert your favorite language here — Clojure? Haxe? Elm?] we wouldn't need to worry about JavaScript at all!
 
 I thought about this for quite a while when we started on TypeScript at Google. I've convinced myself that using a different language cannot solve the problem that we're looking at.
 
