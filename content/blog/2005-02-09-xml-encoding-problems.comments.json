@@ -3,7 +3,7 @@
   "author": "Sam Ruby",
   "url": "http://www.intertwingly.net/blog/",
   "kind": "COMMENT",
-  "text": "My problem is not with namepaces in general, but with a specific application, best described by an example.  Take a look at http://www.soapware.org/weblogsCom\n\nThe envelope in the first example declares five namespaces.  Only four are ever used, but that is OK.  I'd like to focus on the xsd namespace.  It is not used in association with the name of any element, or with the name of any attribute, it is only used WITHIN A STRING.\n\nA general purpose XML parser can help by keeping track of namespaces and expanding the prefixes for you.  However, it can't know whether or not the colon within the string is significant.  It can only provide a parsed document.  This means that not only does the parser need to keep track of namespaces, but the caller does too.\n\n\n",
+  "text": "My problem is not with namepaces in general, but with a specific application, best described by an example.  Take a look at http://www.soapware.org/weblogsCom\n\nThe envelope in the first example declares five namespaces.  Only four are ever used, but that is OK.  I'd like to focus on the xsd namespace.  It is not used in association with the name of any element, or with the name of any attribute, it is only used WITHIN A STRING.\n\nA general purpose XML parser can help by keeping track of namespaces and expanding the prefixes for you.  However, it can't know whether or not the colon within the string is significant.  It can only provide a parsed document.  This means that not only does the parser need to keep track of namespaces, but the caller does too.",
   "created": "2005-02-09T18:59:25+00:00"
  },
  {

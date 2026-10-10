@@ -1,6 +1,6 @@
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import { marked } from 'marked';
+import { Marked, marked } from 'marked';
 
 const SITE = 'https://probst.io';
 const OUT = '_site';
@@ -38,23 +38,26 @@ function parseFrontMatter(source: string) {
   return { fields, body: match[2] };
 }
 
-// Removes active content from archived comments, recording what was removed.
-const unsafePatterns: [string, RegExp][] = [
-  ['<script>', /<script\b[\s\S]*?(<\/script\s*>|$)/gi],
-  ['<iframe>', /<iframe\b[\s\S]*?(<\/iframe\s*>|$)/gi],
-  ['javascript:', /javascript:/gi],
-  ['on...= attribute', /\s+on[a-z]+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi],
-];
-const sanitizeFindings: string[] = [];
-function stripActiveContent(text: string, where: string) {
-  for (const [name, pattern] of unsafePatterns) {
-    text = text.replace(pattern, (found) => {
-      sanitizeFindings.push(`${where}: ${name}: ${found.slice(0, 80).replace(/\s+/g, ' ')}`);
-      return '';
-    });
-  }
-  return text;
-}
+// Archived comments are third-party text, so they get Markdown formatting only:
+// raw HTML is shown as text, links must be http(s) or mailto, images show their alt text.
+const isSafeLinkTarget = (url: string) => /^(https?:|mailto:)/i.test(url);
+const commentMarkdown = new Marked({
+  renderer: {
+    html({ text }) {
+      return escapeHtml(text);
+    },
+    link({ href, tokens }) {
+      const label = this.parser.parseInline(tokens);
+      if (!isSafeLinkTarget(href)) {
+        return label;
+      }
+      return `<a href="${escapeHtml(href)}" rel="nofollow ugc">${label}</a>`;
+    },
+    image({ text }) {
+      return escapeHtml(text);
+    },
+  },
+});
 
 const droppedDrafts: string[] = [];
 function loadPosts() {
@@ -67,9 +70,6 @@ function loadPosts() {
     }
     const sidecar = join(BLOG_DIR, name.replace(/\.md$/, '.comments.json'));
     const comments: Comment[] = existsSync(sidecar) ? JSON.parse(readFileSync(sidecar, 'utf8')) : [];
-    for (const comment of comments) {
-      comment.text = stripActiveContent(comment.text, `${name} (${comment.author})`);
-    }
     posts.push({
       title: JSON.parse(fields.title), date: fields.date, updated: fields.updated, url: fields.url,
       slug: name.replace(/\.md$/, ''), comments,
@@ -120,11 +120,11 @@ function redirectStub(target: string) {
 }
 
 function renderComments(post: Post) {
-  const render = (text: string) => marked.parse(text, { async: false }) as string;
+  const render = (text: string) => commentMarkdown.parse(text, { async: false }) as string;
   const comments = post.comments.filter((c) => c.kind === 'COMMENT');
   const links = post.comments.filter((c) => c.kind !== 'COMMENT');
   const authorLink = (c: Comment) =>
-    c.url ? `<a href="${escapeHtml(c.url)}" rel="nofollow ugc">${escapeHtml(c.author)}</a>` : escapeHtml(c.author);
+    isSafeLinkTarget(c.url) ? `<a href="${escapeHtml(c.url)}" rel="nofollow ugc">${escapeHtml(c.author)}</a>` : escapeHtml(c.author);
   let html = '<section class="comments">\n';
   if (comments.length > 0) {
     html += '<h2>Archived comments</h2>\n';
@@ -235,6 +235,5 @@ if (existsSync('static')) {
 
 console.log(`${posts.length} posts, ${stubs + 1} redirect stubs`);
 console.log(`Excluded drafts: ${droppedDrafts.join(', ') || 'none'}`);
-console.log(`Stripped from comments: ${sanitizeFindings.length === 0 ? 'nothing' : '\n  ' + sanitizeFindings.join('\n  ')}`);
 const brokenLinks = findBrokenLinks();
 console.log(`Broken root-relative links: ${brokenLinks.length === 0 ? 'none' : '\n  ' + brokenLinks.join('\n  ')}`);

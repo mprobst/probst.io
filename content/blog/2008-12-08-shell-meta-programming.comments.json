@@ -3,7 +3,7 @@
   "author": "Alexander Klimetschek",
   "url": "http://weblogs.goshaky.com/weblogs/alexkli/",
   "kind": "COMMENT",
-  "text": "You could also write a java launcher app instead of shell-scripts. Simply fork the JVM with the new memory settings. Something like\n\nfinal String javaExecutable = isWindows ? \"java.exe\" : \"java\";\nfinal String jvm = System.getProperty( \"java.home\" ) + File.separator + \"bin\" + File.separator + javaExecutable;\n\nRuntime.getRuntime().exec(new String[] {\n   jvm, \"-Xmx256m\", \"-jar\", jarFilename\n});\n\ndoes the trick. If you can put everything in one jar file, and have the startup code detect if it is the normal or forked variant, you end up with a double-clickable jar that automatically uses the right amount of heap size (instead of the default 64mb) or the ones configured in your rc file.\n",
+  "text": "You could also write a java launcher app instead of shell-scripts. Simply fork the JVM with the new memory settings. Something like\n\nfinal String javaExecutable = isWindows ? \"java.exe\" : \"java\";\nfinal String jvm = System.getProperty( \"java.home\" ) + File.separator + \"bin\" + File.separator + javaExecutable;\n\nRuntime.getRuntime().exec(new String[] {\n   jvm, \"-Xmx256m\", \"-jar\", jarFilename\n});\n\ndoes the trick. If you can put everything in one jar file, and have the startup code detect if it is the normal or forked variant, you end up with a double-clickable jar that automatically uses the right amount of heap size (instead of the default 64mb) or the ones configured in your rc file.",
   "created": "2008-12-08T13:52:17+00:00"
  },
  {

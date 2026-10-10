@@ -3,7 +3,7 @@
   "author": "Mike Champion",
   "url": "blog.msdn.com/mikechampion",
   "kind": "COMMENT",
-  "text": "Someone in the wild (not an XQuery stakeholder) who likes the idea of XQuery as a programming language!  Interesting thoughts, and I agree with the basic thrust that XML support should evolve into languages with first-class support for tree-structured data and the XPath-like operations on the trees.  The static vs dynamic issue seems to be very dependent on use case -- with XML that is very much like serialized objects, static typing is a Good Thing; for loosely structured documents, it tends to get in the way.\n\nMy bias is that XQuery is a Good Thing ... as an XML Query Language. I'm very skeptical about it as a programming language:  First,it is currently read only; what interesting things can you do besides extract information? Second, it is burdened by the XSD type system, which has few friends and many people who detest it.    Finally, it is no less science fiction-y than the alternatives -- NONE of this has been proven with serious applications in practice.  \n\nBasically, Microsoft shared your opinion of XQuery a couple of years ago, invested heavily in making it real, and became disillusioned as the problems multiplied. Maybe others will have better success, but until then .... \n ",
+  "text": "Someone in the wild (not an XQuery stakeholder) who likes the idea of XQuery as a programming language!  Interesting thoughts, and I agree with the basic thrust that XML support should evolve into languages with first-class support for tree-structured data and the XPath-like operations on the trees.  The static vs dynamic issue seems to be very dependent on use case -- with XML that is very much like serialized objects, static typing is a Good Thing; for loosely structured documents, it tends to get in the way.\n\nMy bias is that XQuery is a Good Thing ... as an XML Query Language. I'm very skeptical about it as a programming language:  First,it is currently read only; what interesting things can you do besides extract information? Second, it is burdened by the XSD type system, which has few friends and many people who detest it.    Finally, it is no less science fiction-y than the alternatives -- NONE of this has been proven with serious applications in practice.  \n\nBasically, Microsoft shared your opinion of XQuery a couple of years ago, invested heavily in making it real, and became disillusioned as the problems multiplied. Maybe others will have better success, but until then ....",
   "created": "2005-02-09T02:16:03+00:00"
  },
  {
@@ -17,7 +17,7 @@
   "author": "Software Documentation Weblog",
   "url": "http://weblogs.goshaky.com/weblogs/page/lars/20050211#xpath_is_a_nice_dom",
   "kind": "TRACKBACK",
-  "text": "<strong>XPath is a nice DOM wrapper, but what to do about SAX?</strong>\n\nMartin Probst  complaints about overly complex XML-APIs  and recommends the use of XQuery as a language that can be used to work with XML data programatically, that does not suck. \n\nIn most cases XQuery is more than people need in their applications. I",
+  "text": "**XPath is a nice DOM wrapper, but what to do about SAX?**\n\nMartin Probst  complaints about overly complex XML-APIs  and recommends the use of XQuery as a language that can be used to work with XML data programatically, that does not suck. \n\nIn most cases XQuery is more than people need in their applications. I",
   "created": "2005-02-11T22:18:38+00:00"
  }
 ]

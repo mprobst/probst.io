@@ -3,7 +3,7 @@
   "author": "Richard Metzler",
   "url": "",
   "kind": "COMMENT",
-  "text": "ehrlich, solange du die Wahl hast: nimm keine JSPs und mach nichts mit JSF. (Auch wenn in meiner Firma das mit zum Entwicklungsstack gehoert.) Wenn nicht jede Seite wirklich gleich aussehen muss und man kein Portal oder so baut, nimm lieber einen Templating-Ansatz bei dem nichts kompiliert werden muss. Die Entwicklungszeit ist einfach viel kürzer, wenn man nicht ständig den Server neu starten muss um ein paar Kleinigkeiten zu ändern.\nViele Grüße,\nRichard\n",
+  "text": "ehrlich, solange du die Wahl hast: nimm keine JSPs und mach nichts mit JSF. (Auch wenn in meiner Firma das mit zum Entwicklungsstack gehoert.) Wenn nicht jede Seite wirklich gleich aussehen muss und man kein Portal oder so baut, nimm lieber einen Templating-Ansatz bei dem nichts kompiliert werden muss. Die Entwicklungszeit ist einfach viel kürzer, wenn man nicht ständig den Server neu starten muss um ein paar Kleinigkeiten zu ändern.\nViele Grüße,\nRichard",
   "created": "2008-04-22T15:28:52+00:00"
  },
  {

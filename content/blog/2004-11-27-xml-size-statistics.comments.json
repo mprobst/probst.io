@@ -3,7 +3,7 @@
   "author": "Software Documentation Weblog",
   "url": "http://weblogs.goshaky.com/weblogs/page/lars/20041128#who_needs_size_statistics",
   "kind": "TRACKBACK",
-  "text": "<strong>Who needs size statistics</strong>\nMartin , no one needs size statistics, when one can use containers with growing size. To estimate the ideal container size, two characteristics are important: What is the maximum overhead for the container and what is the minimum overhead. \nLarge Contai",
+  "text": "**Who needs size statistics**\nMartin , no one needs size statistics, when one can use containers with growing size. To estimate the ideal container size, two characteristics are important: What is the maximum overhead for the container and what is the minimum overhead. \nLarge Contai",
   "created": "2004-11-28T12:59:41+00:00"
  }
 ]

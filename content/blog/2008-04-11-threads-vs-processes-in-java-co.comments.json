@@ -17,14 +17,14 @@
   "author": "mbien",
   "url": "http://www.michael-bien.com/roller/mbien",
   "kind": "COMMENT",
-  "text": ">I'd hope to port the benefits of certain\n>Erlang properties & idioms to a more\n>mainstream language and runtime like\n>Java.\nmaybe Scala is the right language for those kind of experiments even if its not (yet) mainstream.\n\n\n",
+  "text": ">I'd hope to port the benefits of certain\n>Erlang properties & idioms to a more\n>mainstream language and runtime like\n>Java.\nmaybe Scala is the right language for those kind of experiments even if its not (yet) mainstream.",
   "created": "2008-04-12T11:47:23+00:00"
  },
  {
   "author": "Alex Miller",
   "url": "http://tech.puredanger.com",
   "kind": "COMMENT",
-  "text": "If you're in the Java world already, <a href=\"http://terracotta.org\">Terracota</a> can provide some interesting possibilities to write in normal Java yet spread your work across processes or threads as you desire.  Terracotta by itself doesn't handle the notion of spawning/killing processes but does support all of the shared memory / coordination aspects.\n\nI've actually built a distributed testing framework that ties together Groovy scripted agents with Terracotta and some Java code to manage testing agents and so forth, which worked really well.  (Soon to be open-sourced and publicized.)\n\nYes, I work for Terracotta.",
+  "text": "If you're in the Java world already, [Terracota](http://terracotta.org) can provide some interesting possibilities to write in normal Java yet spread your work across processes or threads as you desire.  Terracotta by itself doesn't handle the notion of spawning/killing processes but does support all of the shared memory / coordination aspects.\n\nI've actually built a distributed testing framework that ties together Groovy scripted agents with Terracotta and some Java code to manage testing agents and so forth, which worked really well.  (Soon to be open-sourced and publicized.)\n\nYes, I work for Terracotta.",
   "created": "2008-04-14T00:48:25+00:00"
  },
  {

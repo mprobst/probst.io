@@ -3,7 +3,7 @@
   "author": "n/a",
   "url": "",
   "kind": "COMMENT",
-  "text": "<p>I agree it is all just scope. However, each scope has its hard coded semantics and VM behavior, which make them quite different.</p>\n\n<p>The OSGi takes the package scope very serious and adds a fourth scope: the bundle or JAR file that provides visibility rules and additional meta data for the other scopes.</p>\n\n<p>Kind regards,</p>\n\n<p>Peter Kriens</p>\n",
+  "text": "I agree it is all just scope. However, each scope has its hard coded semantics and VM behavior, which make them quite different.\n\nThe OSGi takes the package scope very serious and adds a fourth scope: the bundle or JAR file that provides visibility rules and additional meta data for the other scopes.\n\nKind regards,\n\nPeter Kriens",
   "created": "2007-04-02T10:23:45+00:00"
  }
 ]

@@ -3,7 +3,7 @@
   "author": "Software Documentation Weblog",
   "url": "http://weblogs.goshaky.com/weblogs/page/lars/20050306#mime_types_in_your_file",
   "kind": "TRACKBACK",
-  "text": "<strong>Mime types in your file system</strong>\n\nMartin Probst  fights against  Eclipse's insensitivity of different file types with identical filename extensions  . Operating Systems like Mac OS X do not rely on file name extensions and GNOME already supports a mime type system for the filesystem. ...",
+  "text": "**Mime types in your file system**\n\nMartin Probst  fights against  Eclipse's insensitivity of different file types with identical filename extensions  . Operating Systems like Mac OS X do not rely on file name extensions and GNOME already supports a mime type system for the filesystem. ...",
   "created": "2005-03-06T18:54:29+00:00"
  }
 ]

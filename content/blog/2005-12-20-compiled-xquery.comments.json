@@ -3,7 +3,7 @@
   "author": "Software Documentation Weblog",
   "url": "http://weblogs.goshaky.com/weblogs/page/lars?entry=more_compiled_xquery",
   "kind": "TRACKBACK",
-  "text": "<strong>More Compiled XQuery</strong>\n\nMartin Probst  responded to my yesterday's post:  Compiled XQuery  \n\nLars, just because XQuery can be statically typed you can?t remove all the runtime checks and by that be much faster, there are still a lot of (possibly non-type related) runtime...",
+  "text": "**More Compiled XQuery**\n\nMartin Probst  responded to my yesterday's post:  Compiled XQuery  \n\nLars, just because XQuery can be statically typed you can?t remove all the runtime checks and by that be much faster, there are still a lot of (possibly non-type related) runtime...",
   "created": "2005-12-21T20:52:29+00:00"
  }
 ]

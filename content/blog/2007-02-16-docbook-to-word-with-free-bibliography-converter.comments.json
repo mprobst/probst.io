@@ -3,7 +3,7 @@
   "author": "Jonas B.",
   "url": "http://x",
   "kind": "COMMENT",
-  "text": "<p>Why not edit the LaTeX source \"by hand\"? It's not really that bad, the syntax is simple and you can really learn what you need in fifteen minutes or so. On the upside you have a document format which is a lot more stable than any of the others, it's all plaintext so it's trivial to move cross platforms and backup, and it can definitely do what you need.</p>\n",
+  "text": "Why not edit the LaTeX source \"by hand\"? It's not really that bad, the syntax is simple and you can really learn what you need in fifteen minutes or so. On the upside you have a document format which is a lot more stable than any of the others, it's all plaintext so it's trivial to move cross platforms and backup, and it can definitely do what you need.",
   "created": "2007-04-24T20:05:37+00:00"
  }
 ]

@@ -3,14 +3,14 @@
   "author": "Erik Engbrecht",
   "url": "http://erikengbrecht.blogspot.com",
   "kind": "COMMENT",
-  "text": "<p>How long did the Ruby take to execute on your machine?</p>\n",
+  "text": "How long did the Ruby take to execute on your machine?",
   "created": "2007-09-25T16:13:47+00:00"
  },
  {
   "author": "JavaSPEKTRUM Blogosphäre » Blog Archiv » Blogosphäre (aus JavaSPEKTRUM 06/07)",
   "url": "http://www.sigs.de/blog/js/?p=32",
   "kind": "PINGBACK",
-  "text": "<p>[...] Datei in den Speicher. Seine verbesserte Lösung beseitigt dieses Problem. Martin Probst liefert die Scala-Variante, Santiago Gala verwendet Python und den bereits in der letzten Kolumne erwähnten [...]</p>\n",
+  "text": "[...] Datei in den Speicher. Seine verbesserte Lösung beseitigt dieses Problem. Martin Probst liefert die Scala-Variante, Santiago Gala verwendet Python und den bereits in der letzten Kolumne erwähnten [...]",
   "created": "2007-10-16T12:16:16+00:00"
  },
  {
@@ -24,7 +24,7 @@
   "author": "Martin Probst",
   "url": "http://www.martin-probst.com",
   "kind": "COMMENT",
-  "text": "My code has changed since the above version quite significantly, but I think the Actor code here is correct - the counts hashmap exists for each Actor, and within a single Actor only one Thread executes at any time, so there should not be a problem there.\n\nYou can find the logs I used at Tim Bray's site: <a href=\"http://www.tbray.org/tmp/o10k.ap\">http://www.tbray.org/tmp/o10k.ap</a>",
+  "text": "My code has changed since the above version quite significantly, but I think the Actor code here is correct - the counts hashmap exists for each Actor, and within a single Actor only one Thread executes at any time, so there should not be a problem there.\n\nYou can find the logs I used at Tim Bray's site: [http://www.tbray.org/tmp/o10k.ap](http://www.tbray.org/tmp/o10k.ap)",
   "created": "2007-11-24T09:44:52+00:00"
  }
 ]
