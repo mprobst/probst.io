@@ -80,6 +80,8 @@ function loadPosts() {
 }
 
 function page(title: string, content: string, canonicalPath: string) {
+  // The home page starts with the name itself, so it doesn't need the link home.
+  const homeLink = canonicalPath === '/' ? '' : '<nav><a href="/">Martin Probst</a></nav>\n';
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -91,8 +93,7 @@ function page(title: string, content: string, canonicalPath: string) {
 <link rel="canonical" href="${escapeHtml(SITE + canonicalPath)}">
 </head>
 <body>
-<nav><a href="/">Martin Probst</a></nav>
-<main>
+${homeLink}<main>
 ${content}
 </main>
 </body>
@@ -160,13 +161,8 @@ function renderHome(posts: Post[]) {
       .join('\n');
     return `<h3>${year}</h3>\n<ul class="posts">\n${items}\n</ul>`;
   }).join('\n');
-  const content = `<h1>Martin Probst</h1>
-<!-- TODO: short bio -->
-<p>TODO: short bio</p>
-<ul>
-<li><a href="https://github.com/mprobst">GitHub</a> (TODO: placeholder)</li>
-<li><a href="mailto:martin@probst.io">Email</a> (TODO: placeholder)</li>
-</ul>
+  const about = marked.parse(readFileSync('content/home.md', 'utf8'), { async: false });
+  const content = `${about}
 <h2>Writing</h2>
 ${writing}`;
   return page('Martin Probst', content, '/');
