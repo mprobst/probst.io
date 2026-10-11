@@ -1,8 +1,8 @@
 ---
-title: "Test suites do half the work"
+title: "AI wrote the compiler, the test suites planned it"
 date: 2026-02-06T03:54:48+00:00
 updated: 2026-02-06T03:54:48+00:00
-url: /blog/2026/02/06/test-suites-do-half-the-work/
+url: /blog/2026/02/06/ai-wrote-the-compiler-the-test-suites-planned-it/
 draft: false
 comments: 0
 ---
