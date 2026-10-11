@@ -9,7 +9,7 @@ comments: 0
 
 Some time ago I was asked to create a quick demo of how to create a documentation browser with X-Hive/DB. The idea was to present one huge document with a tree navigation on the left and the content of a selected tree node on the right. An XSL stylesheet to transform the document into HTML already existed.
 
-<a class="imagelink" href="http://www.martin-probst.com/wordpress/wp-content/uploads/2006/04/ammbrowser.png" title="AMM Browser"><img id="image83" src="http://www.martin-probst.com/wordpress/wp-content/uploads/2006/04/ammbrowser.thumbnail.png" alt="AMM Browser" height="53" width="128" /></a>
+*(Screenshot no longer available.)*
 
 For the curious: AMM stands for "aircraft maintenance manual", this documents the procedures necessary for different defects or routine maintenance on air planes. And no, the engineers don't do Lorem ipsum all the time ;-)
 

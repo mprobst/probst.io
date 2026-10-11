@@ -39,6 +39,6 @@ But there is no apparent alternative. OpenOffice is no better, plus it sucks mor
 
 So how did I get the existing document from DocBook to Word? I didn't get those transformation stylesheets available to run, but in the end I've more or less simply imported the full text from the XML document.
 
-I've written a small stylesheet to convert the docbook bibliography to Word 2007 format, available <a href="/docbookbib2word.xsl">here</a>. It's probably incomplete, erroneous etc. and will kill all your data, but hey, it's at least something ;-)
+I've written a small stylesheet to convert the docbook bibliography to Word 2007 format *(no longer available)*. It's probably incomplete, erroneous etc. and will kill all your data, but hey, it's at least something ;-)
 
 You can simply run your existing bibliography through it and then select that file as the bibliography source in Word, or alternatively merge it with the existing file using your favorite VIM, uh, text editor I mean ;-)

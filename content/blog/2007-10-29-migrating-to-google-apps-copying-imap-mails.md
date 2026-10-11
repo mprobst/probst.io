@@ -15,7 +15,7 @@ So I moved all my email related stuff to Google Apps. So far it looks quite nice
 
 Now I’m copying all my IMAP emails over to Google Mail. Surprisingly, I couldn’t find an easy to use, readily working script to copy IMAP messages from one host to another. There are several, but they seem to be either unmaintained, requiring obscure dependencies, or require bizarrely complicated setup.
 
-So in a first class wheel reinvention act I wrote my own IMAP copy tool, in ruby; <a href="/imapcopy.rb">imapcopy.rb</a>. Only dependency is highline for the password prompt, but if you don’t want that, you can easily adapt the code.
+So in a first class wheel reinvention act I wrote my own IMAP copy tool, in ruby; imapcopy.rb. *(The script is no longer available.)* Only dependency is highline for the password prompt, but if you don’t want that, you can easily adapt the code.
 
 I really like it: it does everything I needed, doesn’t require any configuration, it only copies messages that are not present on the new host, and even prints a nice spinner ;-). Sample usage:
 
